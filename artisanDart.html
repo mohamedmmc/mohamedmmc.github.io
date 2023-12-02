@@ -2,15 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Mohamed Melek Chtourou Portfolio</title>
+    <title>Witch Undo The Spell</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
-    <meta
-      property="og:image"
-      content="https://res.cloudinary.com/dy05x9auh/image/upload/v1659178101/22585_Converti_ti1dgq.png"
-    />
-    <meta property="og:image:type" content="image/png" />
 
     <!-- Favicons -->
     <link href="img/favicon.png" rel="icon" />
@@ -59,9 +54,11 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <!-- <li><a href="about.html">About</a></li> -->
-            <li><a href="#works" class="smoothscroll">Projects</a></li>
+            <li class="active">
+              <a href="index.html#works" class="smoothscroll">Projects</a>
+            </li>
             <!-- <li><a href="contact.html" class="smoothscroll">Contact</a></li> -->
           </ul>
         </div>
@@ -69,121 +66,104 @@
       </div>
     </div>
 
-    <canvas id="canvas" class="mmc"></canvas>
+    <div style="background-color: black">
+      <img id="imagework" src="img/portfolio/logoName2.png" />
+    </div>
 
-    <div id="block">
-      <div class="container-fluid">
+    <section id="works"></section>
+    <div class="container">
+      <div class="row centered mt mb">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>Year</h2>
+          <h3>2023</h3>
+          <h2>Technology used</h2>
+          <h3>
+            Artisan D'art is developed with Swift with Swiftui for mobile
+            Frontend, React for the dashboard, Javascript with Node.js for the
+            Backend, and MySQL
+          </h3>
+          <h2>ABOUT THE PROJECT</h2>
+
+          <h3>
+            Artisan D'art allows users to subscribe to artisans for
+            notifications, fostering engagement. Artisans can showcase their
+            work, promoting articles and connecting with a global audience,
+            creating a dynamic exchange within the community.
+          </h3>
+        </div>
         <div class="row">
-          <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12 align-center">
-            <h3 style="font-size: 35px">HELLO PEOPLE, MY NAME IS</h3>
-            <h1>MELEK CHTOUROU</h1>
-            <div id="text"></div>
-            <div id="cursor"></div>
-            <div>
-              <button
-                type="submit"
-                class="cybr-btn"
-                onclick="window.open('contactform/cv.pdf')"
-              >
-                <a href="contactform/cv.pdf" download="Melek Chtourou"></a>
-                Download Resume<span aria-hidden></span>
-                <span aria-hidden class="cybr-btn__glitch">MMC</span>
-              </button>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 align-center">
+          <div class="column">
             <img
-              class="icenter-block"
-              id="imgdiv"
-              src="img/Plan de travail 1.png"
+              class="img-responsive"
+              src="img/portfolio/artisanDart/eventList.PNG"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="img-responsive"
+              src="img/portfolio/artisanDart/filteredSearch.PNG"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="img-responsive"
+              src="img/portfolio/artisanDart/home.PNG"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="img-responsive"
+              src="img/portfolio/artisanDart/IMG_2876.PNG"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="img-responsive"
+              src="img/portfolio/artisanDart/UpdateArticle1.PNG"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="img-responsive"
+              src="img/portfolio/artisanDart/upgradeAccount.png"
             />
           </div>
         </div>
       </div>
-    </div>
-    <div>
-      <section id="section05" class="demo">
-        <a href="#works"><span></span>Scroll</a>
-      </section>
-    </div>
-    <!-- /container -->
-
-    <section id="works"></section>
-    <div class="container">
-      <div class="row centered">
-        <h1 style="color: #fff; font-size: 90px">My Portfolio</h1>
-
-        <div class="col-lg-3 col-md-4 col-sm-4 gallery">
-          <a href="witch.html"
-            ><img src="img/portfolio/logo sjeu.png" class="img-responsive"
-          /></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-4 gallery">
-          <a href="smartMedicalOficce.html"
-            ><img src="img/portfolio/smopng.png" class="img-responsive"
-          /></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-4 gallery">
-          <a href="euroRentCar.html"
-            ><img src="img/portfolio/eurorentcar1.png" class="img-responsive"
-          /></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-4 gallery">
-          <a href="sportPal.html"
-            ><img src="img/portfolio/sportpal.png" class="img-responsive"
-          /></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-4 gallery">
-          <a href="lost&found.html"
-            ><img src="img/portfolio/lost&found3.png" class="img-responsive"
-          /></a>
-        </div>
-
-        <div class="col-lg-3 col-md-2 col-sm-4 gallery">
-          <a href="espritApp.html"
-            ><img src="img/portfolio/esprit.png" class="img-responsive"
-          /></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-4 gallery">
-          <a href="randev.html"
-            ><img src="img/portfolio/randev.png" class="img-responsive"
-          /></a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-4 gallery">
-          <a href="artisanDart.html"
-            ><img src="img/portfolio/logoName2.png" class="img-responsive"
-          /></a>
-        </div>
+      <!-- <div>
+        <h3 imaage>Trailer</h3>
+        <iframe id="video" src="https://www.youtube.com/embed/lCi2Lzz93dM">
+        </iframe>
       </div>
+      <br />
     </div>
-
     <div id="social">
       <div class="container">
         <div class="row centered">
           <div class="col-lg-3 col-md-6 col-sm-6">
-            <a class="" href="https://www.facebook.com/tiktikatikadesuka"
-              ><i class="fa fa-lg fa-facebook facebook"></i
+            <a href="https://www.facebook.com/tiktikatikadesuka"
+              ><i class="fa fa-lg fa-facebook"></i
             ></a>
           </div>
           <div class="col-lg-3 col-md-3col-sm-6">
             <a href="https://github.com/mohamedmmc"
-              ><i class="fa fa-lg fa-github github"></i
+              ><i class="fa fa-lg fa-github"></i
             ></a>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6">
             <a
               href="https://www.linkedin.com/in/mohamed-melek-chtourou-a6a2561b2/"
-              ><i class="fa fa-linkedin linkedin"></i
+              ><i class="fa fa-linkedin"></i
             ></a>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6">
             <a href="https://www.instagram.com/mohamed_chtourou93/"
-              ><i class="fa fa-instagram instagram"></i
+              ><i class="fa fa-instagram"></i
             ></a>
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div id="copyrights">
       <div class="container">
@@ -206,6 +186,7 @@
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/php-mail-form/validate.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
