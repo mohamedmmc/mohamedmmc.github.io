@@ -1,45 +1,53 @@
+import 'package:cv_interactif/widgets/particle_background.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import '../core/app_colors.dart';
+import '../core/app_values.dart';
+import '../widgets/player_intro.dart';
+import '../widgets/menu_buttons.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
+  double _opacity = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(milliseconds: 300), () {
+      setState(() => _opacity = 1);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              '👋 Hey, I\'m Mohamed',
-              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                    color: Colors.cyanAccent,
-                    fontWeight: FontWeight.bold,
-                  ),
-            ),
-            const SizedBox(height: 16),
-            Text(
-              'Flutter Fullstack Developer | Gamer | Creator',
-              style: TextStyle(color: Colors.white70),
-            ),
-            const SizedBox(height: 32),
-            Wrap(
-              spacing: 20,
-              children: [
-                ElevatedButton(
-                  onPressed: () => context.go('/about'),
-                  child: const Text('About Me'),
+      backgroundColor: AppColors.background,
+      body: Stack(
+        children: [
+          const Positioned.fill(child: ParticleBackground()),
+          AnimatedOpacity(
+            opacity: _opacity,
+            duration: const Duration(seconds: 1),
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(AppValues.padding),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    PlayerIntro(),
+                    SizedBox(height: AppValues.sectionSpacing),
+                    MenuButtons(),
+                  ],
                 ),
-                ElevatedButton(
-                  onPressed: () => context.go('/projects'),
-                  child: const Text('Projects'),
-                ),
-              ],
+              ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
