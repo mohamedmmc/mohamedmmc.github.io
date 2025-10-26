@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CPH7RV6E5M"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-CPH7RV6E5M");
+    </script>
+
+    <meta charset="utf-8" />
+    <title>The Landlord — Projet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Présentation du projet The Landlord — plateforme de gestion et de location immobilière."
+    />
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon" />
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background: #000;
+        color: #fff;
+      }
+
+      .project-hero {
+        background: #000;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .project-hero img {
+        max-height: 140px;
+        width: auto;
+      }
+
+      .project-section {
+        padding: 40px 0;
+      }
+
+      .feature-card {
+        border: 1px solid #2b2b2b;
+        background: #0f0f0f;
+        color: #eee;
+        border-radius: 8px;
+        padding: 18px;
+        margin-bottom: 16px;
+      }
+
+      .tech-badge {
+        display: inline-block;
+        margin: 4px 6px;
+        padding: 6px 10px;
+        background: #222;
+        color: #fff;
+        border-radius: 16px;
+        font-size: 0.9rem;
+      }
+
+      .screenshot {
+        cursor: pointer;
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+      }
+
+      .project-row {
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+      }
+
+      .project-row > [class*="col-"] {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #landlordCarousel {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-height: 600px;
+      }
+
+      .carousel-inner,
+      .carousel-inner .item {
+        height: 100%;
+      }
+
+      .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 767px) {
+        .project-row {
+          flex-direction: column-reverse;
+        }
+
+        #landlordCarousel {
+          max-height: 420px;
+        }
+
+        .carousel-inner img {
+          object-fit: contain;
+          height: auto;
+          max-height: 420px;
+        }
+
+        .feature-card {
+          margin-bottom: 20px;
+        }
+      }
+
+      .navbar-default {
+        background-color: #111;
+        border: none;
+      }
+
+      .navbar-default .navbar-brand {
+        color: #fff;
+      }
+
+      .navbar-default .navbar-nav > li > a {
+        color: #ddd;
+      }
+
+      .navbar-default .navbar-nav > li.active > a {
+        color: #fff;
+      }
+
+      a.site-link {
+        color: #00aaff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      a.site-link:hover {
+        color: #33ccff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Barre de navigation -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Basculer la navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Mohamed Melek Chtourou</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Accueil</a></li>
+            <li class="active">
+              <a href="index.html#works" class="smoothscroll">Projets</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="project-hero">
+      <a
+        href="https://thelandlord.tn/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="img/portfolio/thelandlord/logotll.png" alt="The Landlord" />
+      </a>
+      <h1 style="color: #fff; margin-top: 18px">The Landlord</h1>
+      <p style="color: #bbb; max-width: 900px; margin: 10px auto">
+        Plateforme moderne pour la gestion et la location immobilière — une
+        solution complète pour propriétaires et locataires.
+      </p>
+    </div>
+
+    <!-- Section principale -->
+    <section class="project-section">
+      <div class="container">
+        <div class="row project-row">
+          <!-- Carousel -->
+          <div class="col-lg-6 col-md-6">
+            <div
+              id="landlordCarousel"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#landlordCarousel"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li data-target="#landlordCarousel" data-slide-to="1"></li>
+                <li data-target="#landlordCarousel" data-slide-to="2"></li>
+                <li data-target="#landlordCarousel" data-slide-to="3"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img
+                    src="img/portfolio/thelandlord/home.png"
+                    alt="Accueil - The Landlord"
+                  />
+                </div>
+                <div class="item">
+                  <img
+                    src="img/portfolio/thelandlord/listing.png"
+                    alt="Liste d'annonces"
+                  />
+                </div>
+                <div class="item">
+                  <img
+                    src="img/portfolio/thelandlord/detail.png"
+                    alt="Page détail bien"
+                  />
+                </div>
+                <div class="item">
+                  <img
+                    src="img/portfolio/thelandlord/dashboard.png"
+                    alt="Dashboard propriétaire"
+                  />
+                </div>
+              </div>
+
+              <a
+                class="left carousel-control"
+                href="#landlordCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="glyphicon glyphicon-chevron-left"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Précédent</span>
+              </a>
+              <a
+                class="right carousel-control"
+                href="#landlordCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="glyphicon glyphicon-chevron-right"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Suivant</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Infos -->
+          <div class="col-lg-6 col-md-6">
+            <div class="feature-card">
+              <h3 style="margin-top: 0; color: #fff">Résumé</h3>
+              <p style="color: #ccc">
+                The Landlord est une plateforme web destinée à simplifier la
+                location et la gestion de biens immobiliers. Elle permet aux
+                propriétaires de gérer leurs annonces et aux locataires de
+                trouver un logement via des filtres avancés.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <h4 style="color: #fff">Technologies</h4>
+              <div>
+                <span class="tech-badge">React / Next.js</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Express</span>
+                <span class="tech-badge">MongoDB</span>
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <h4 style="color: #fff">Fonctionnalités clés</h4>
+              <ul style="color: #ddd">
+                <li>Recherche multi-critères (prix, localisation, type)</li>
+                <li>Gestion d’annonces (création, modification, calendrier)</li>
+                <li>Messagerie entre locataires et propriétaires</li>
+                <li>Pages de biens avec galeries et infos détaillées</li>
+              </ul>
+            </div>
+
+            <div class="feature-card">
+              <h4 style="color: #fff">Année</h4>
+              <p style="color: #ccc">2023–2024</p>
+            </div>
+
+            <div class="feature-card" style="text-align: center">
+              <h4 style="color: #fff">Lien du site</h4>
+              <p>
+                <a
+                  href="https://thelandlord.tn/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="site-link"
+                  >https://thelandlord.tn/</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Charger le footer
+      (async function () {
+        try {
+          const res = await fetch("footer.html");
+          if (!res.ok) throw new Error("Échec du chargement");
+          const html = await res.text();
+          document.getElementById("footer-placeholder").innerHTML = html;
+        } catch (e) {
+          console.warn("Impossible de charger footer.html", e);
+        }
+      })();
+    </script>
+
+    <!-- JS -->
+    <script type="module" src="js/firebase-config.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/php-mail-form/validate.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
