@@ -22,8 +22,8 @@
     <meta content="" name="description" />
 
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon" />
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="../../assets/img/favicon.png" rel="icon" />
+    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
     <link
@@ -32,11 +32,11 @@
     />
 
     <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="../../assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/style.css" rel="stylesheet" />
 
     <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -50,7 +50,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img id="" src="img/portfolio/TesaLogo.png" alt="Logo Tesa" />
+          <img id="" src="../../assets/img/portfolio/TesaLogo.png" alt="Logo Tesa" />
         </a>
         <h1 style="color: #fff; margin-top: 18px">Tesa</h1>
         <p style="color: #bbb; max-width: 900px; margin: 10px auto">
@@ -83,25 +83,25 @@
                 <div class="carousel-inner">
                   <div class="item active">
                     <img
-                      src="img/portfolio/Tesa/home.PNG"
+                      src="../../assets/img/portfolio/Tesa/home.PNG"
                       alt="Tesa - écran d'accueil"
                     />
                   </div>
                   <div class="item">
                     <img
-                      src="img/portfolio/Tesa/classment_home.PNG"
+                      src="../../assets/img/portfolio/Tesa/classment_home.PNG"
                       alt="Tesa - classement"
                     />
                   </div>
                   <div class="item">
                     <img
-                      src="img/portfolio/Tesa/video_home.PNG"
+                      src="../../assets/img/portfolio/Tesa/video_home.PNG"
                       alt="Tesa - vidéos"
                     />
                   </div>
                   <div class="item">
                     <img
-                      src="img/portfolio/Tesa/players.PNG"
+                      src="../../assets/img/portfolio/Tesa/players.PNG"
                       alt="Tesa - joueurs"
                     />
                   </div>
@@ -177,7 +177,7 @@
             <div class="col-sm-4">
               <div class="thumbnail" style="background: #0d0d0d; border: none">
                 <img
-                  src="img/portfolio/Tesa/home.PNG"
+                  src="../../assets/img/portfolio/Tesa/home.PNG"
                   class="img-responsive screenshot"
                   alt="Accueil"
                 />
@@ -186,7 +186,7 @@
             <div class="col-sm-4">
               <div class="thumbnail" style="background: #0d0d0d; border: none">
                 <img
-                  src="img/portfolio/Tesa/classment_home.PNG"
+                  src="../../assets/img/portfolio/Tesa/classment_home.PNG"
                   class="img-responsive screenshot"
                   alt="Classement"
                 />
@@ -195,7 +195,7 @@
             <div class="col-sm-4">
               <div class="thumbnail" style="background: #0d0d0d; border: none">
                 <img
-                  src="img/portfolio/Tesa/video_home.PNG"
+                  src="../../assets/img/portfolio/Tesa/video_home.PNG"
                   class="img-responsive screenshot"
                   alt="Vidéos"
                 />
@@ -248,7 +248,7 @@
       // Load footer
       (async function () {
         try {
-          const res = await fetch("footer.html");
+          const res = await fetch("../../components/footer.html");
           if (!res.ok) throw new Error("Échec du chargement");
           const html = await res.text();
           document.getElementById("footer-placeholder").innerHTML = html;
@@ -272,7 +272,7 @@
 
       (async function () {
         try {
-          const res = await fetch("navbar.html");
+          const res = await fetch("../../components/navbar.html");
           if (!res.ok) throw new Error("Erreur chargement navbar");
           const html = await res.text();
           document.getElementById("navbar-placeholder").innerHTML = html;
@@ -283,11 +283,11 @@
     </script>
 
     <!-- JS Libraries -->
-    <script type="module" src="js/firebase-config.js"></script>
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/php-mail-form/validate.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="js/main.js"></script>
+    <script type="module" src="../../assets/js/firebase-config.js"></script>
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/lib/php-mail-form/validate.js"></script>
+    <script src="../../assets/lib/easing/easing.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
   </body>
 </html>
