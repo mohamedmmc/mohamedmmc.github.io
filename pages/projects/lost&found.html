@@ -220,53 +220,23 @@
     </div>
 
     <!-- Footer -->
+    
+
+    
     <div id="footer-placeholder"></div>
 
-    <script>
-      // Charger navbar
-      (async function () {
-        try {
-          const res = await fetch("../../components/navbar.html");
-          if (!res.ok) throw new Error("Erreur navbar");
-          const html = await res.text();
-          document.getElementById("navbar-placeholder").innerHTML = html;
-        } catch (e) {
-          console.warn("Impossible de charger navbar.html", e);
-        }
-      })();
+    
 
-      // Charger footer
-      (async function () {
-        try {
-          const res = await fetch("../../components/footer.html");
-          if (!res.ok) throw new Error("Erreur footer");
-          const html = await res.text();
-          document.getElementById("footer-placeholder").innerHTML = html;
-        } catch (e) {
-          console.warn("Impossible de charger footer.html", e);
-        }
-      })();
-
-      // Modal images
-      document.addEventListener("click", function (e) {
-        const el =
-          e.target.closest && e.target.closest(".screenshot, .thumbnail img");
-        if (!el) return;
-        const src = el.getAttribute("data-src") || el.src;
-        const modalImg = document.getElementById("modalImage");
-        if (modalImg) {
-          modalImg.src = src;
-          $("#imageModal").modal("show");
-        }
-      });
-    </script>
-
-    <!-- JS -->
+<!-- JS -->
     <script type="module" src="../../assets/js/firebase-config.js"></script>
     <script src="../../assets/lib/jquery/jquery.min.js"></script>
     <script src="../../assets/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../assets/lib/php-mail-form/validate.js"></script>
     <script src="../../assets/lib/easing/easing.min.js"></script>
     <script src="../../assets/js/main.js"></script>
+    <!-- Navbar Template -->
+    <script src="../../assets/js/navbar.js"></script>
+    <!-- Footer Template -->
+    <script src="../../assets/js/footer.js"></script>
   </body>
 </html>

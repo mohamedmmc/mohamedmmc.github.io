@@ -27,7 +27,7 @@
     <meta property="og:image:type" content="image/png" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
+    <!-- <link href="assets/img/favicon.png" rel="icon" /> -->
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
@@ -40,7 +40,10 @@
     <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Libraries CSS Files -->
-    <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link
+      href="assets/lib/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Main Stylesheet File -->
     <link href="assets/css/style.css" rel="stylesheet" />
@@ -54,57 +57,122 @@
   </head>
 
   <body>
-    <!-- Static navbar -->
-
+    <div id="navbar-placeholder"></div>
     <canvas id="canvas" class="mmc"></canvas>
 
     <div id="block">
       <div class="container-fluid">
-        <div class="row">
-          <div id="imgdiv" class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
-            <h3 style="font-size: 35px">BONJOUR, JE M'APPELLE</h3>
-            <h1>MELEK CHTOUROU</h1>
-            <div id="text"></div>
-            <div id="typing-container">
-              <div id="text"></div>
-              <div id="cursor"></div>
-            </div>
-
-            <div>
-              <button
-                type="submit"
-                class="cybr-btn"
-                onclick="window.open('contactform/cv.pdf')"
-              >
-                <a href="contactform/cv.pdf" download="Melek Chtourou"></a>
-                Télécharger le CV en PDF<span aria-hidden></span>
-                <span aria-hidden class="cybr-btn__glitch">MMC</span>
-              </button>
+        <div class="row align-items-center">
+          <div id="imgdiv" class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
+            <div class="hero-content">
+              <h3 class="greeting-text">BONJOUR, JE M'APPELLE</h3>
+              <h1 class="name-text">MELEK CHTOUROU</h1>
+              <div id="typing-container">
+                <div id="text"></div>
+                <div id="cursor"></div>
+              </div>
+              <p class="hero-description">
+                Ingénieur FullStack passionné par la création d'expériences
+                numériques innovantes. Découvrez mes projets et n'hésitez pas à
+                me contacter pour collaborer.
+              </p>
+              <div class="hero-buttons">
+                <button
+                  type="submit"
+                  class="cybr-btn"
+                  onclick="window.open('contactform/cv.pdf')"
+                >
+                  <a href="contactform/cv.pdf" download="Melek Chtourou"></a>
+                  Télécharger le CV<span aria-hidden></span>
+                  <span aria-hidden class="cybr-btn__glitch">CV</span>
+                </button>
+                <a href="#works" class="cybr-btn">
+                  Voir mes projets<span aria-hidden></span>
+                  <span aria-hidden class="cybr-btn__glitch">PROJETS</span>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <img
-              class="profile-image"
-              src="assets/img/mmc2.jpg"
-              alt="Portrait de Melek Chtourou"
-            />
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="profile-image-container">
+              <img
+                class="profile-image"
+                src="assets/img/mmc2.jpg"
+                alt="Portrait de Melek Chtourou"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div>
       <section id="section05" class="demo">
-        <a href="#works"><span></span>Faire défiler</a>
+        <a href="#about"><span></span>Faire défiler</a>
       </section>
     </div>
     <!-- /container -->
 
-    <section id="works" style="padding: 80px 0">
+    <!-- About Section -->
+    <section id="about" style="padding: 100px 0; background: #0a0a0a">
       <div class="container">
         <div class="text-center" style="margin-bottom: 60px">
-          <h1 style="color: #fff; font-size: 70px; font-weight: 600">
-            Mon portfolio
-          </h1>
+          <h2 class="section-title">À PROPOS</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <p class="about-text">
+              Passionné par le développement web et mobile, je transforme des
+              idées en solutions digitales élégantes et performantes. Avec une
+              expertise en développement full-stack, je crée des applications
+              qui combinent design moderne et fonctionnalité optimale.
+            </p>
+          </div>
+        </div>
+        <div class="skills-container" style="margin-top: 60px">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <div class="skill-card">
+                <i class="fa fa-code skill-icon"></i>
+                <h4>Frontend</h4>
+                <p>React, Angular, Vue.js</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="skill-card">
+                <i class="fa fa-server skill-icon"></i>
+                <h4>Backend</h4>
+                <p>Node.js, .NET, Java</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="skill-card">
+                <i class="fa fa-mobile skill-icon"></i>
+                <h4>Mobile</h4>
+                <p>React Native, Flutter</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="skill-card">
+                <i class="fa fa-database skill-icon"></i>
+                <h4>Database</h4>
+                <p>MongoDB, MySQL, Firebase</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="works" style="padding: 100px 0">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 60px">
+          <h2 class="section-title">MES PROJETS</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">
+            Découvrez une sélection de mes réalisations récentes
+          </p>
         </div>
 
         <div class="projects-grid">
@@ -160,24 +228,16 @@
     </section>
 
     <div id="footer-placeholder"></div>
-    <script>
-      (async function () {
-        try {
-          const res = await fetch("components/footer.html");
-          if (!res.ok) throw new Error("Échec du chargement");
-          const html = await res.text();
-          document.getElementById("footer-placeholder").innerHTML = html;
-        } catch (e) {
-          console.warn("Impossible de charger components/footer.html", e);
-        }
-      })();
-    </script>
+
     <!-- JavaScript Libraries -->
-    <script type="module" src="assets/js/firebase-config.js"></script>
     <script src="assets/lib/jquery/jquery.min.js"></script>
     <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/lib/php-mail-form/validate.js"></script>
     <!-- Template Main Javascript File -->
     <script src="assets/js/main.js"></script>
+    <!-- Navbar Template -->
+    <script src="assets/js/navbar.js"></script>
+    <!-- Footer Template -->
+    <script src="assets/js/footer.js"></script>
   </body>
 </html>

@@ -1,45 +1,73 @@
-<footer
-  id="site-footer"
-  role="contentinfo"
-  style="background: #111; color: #eee; padding: 40px 0"
->
+<!-- Contact Section / Footer -->
+<section id="contact-section" style="padding: 100px 0; background: #0a0a0a">
   <div class="container">
-    <div class="social-icons">
-      <a
-        href="https://www.facebook.com/tiktikatikadesuka"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Facebook"
-      >
-        <i class="fa fa-facebook" aria-hidden="true"></i>
-      </a>
-      <a
-        href="https://github.com/mohamedmmc"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub"
-      >
-        <i class="fa fa-github" aria-hidden="true"></i>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/mohamed-melek-chtourou-a6a2561b2/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn"
-      >
-        <i class="fa fa-linkedin" aria-hidden="true"></i>
-      </a>
-      <a
-        href="https://www.instagram.com/mohamed_chtourou93/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Instagram"
-      >
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-      </a>
+    <div class="text-center" style="margin-bottom: 60px">
+      <h2 class="section-title">CONTACTEZ-MOI</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">
+        Vous avez un projet en tête ? Discutons-en !
+      </p>
     </div>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <div class="contact-cta">
+          <p class="contact-text">
+            Je suis toujours ouvert à de nouvelles opportunités et
+            collaborations. N'hésitez pas à me contacter pour discuter de vos
+            projets.
+          </p>
+          <div class="contact-buttons">
+            <a
+              href="mailto:contact@melekchtourou.com"
+              class="cybr-btn contact-btn"
+            >
+              <i class="fa fa-envelope"></i> M'envoyer un email
+              <span aria-hidden class="cybr-btn__glitch">EMAIL</span>
+            </a>
+          </div>
+          <div class="social-links-section">
+            <a
+              href="https://github.com/mohamedmmc"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link github"
+            >
+              <i class="fa fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mohamed-melek-chtourou-a6a2561b2/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link linkedin"
+            >
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/tiktikatikadesuka"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link facebook"
+            >
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/mohamed_chtourou93/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link instagram"
+            >
+              <i class="fa fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div style="text-align: center; margin-top: 20px; color: #bbb">
+<footer id="site-footer" role="contentinfo" style="background: #000; color: #eee; padding: 40px 0">
+  <div class="container">
+    <div style="text-align: center; color: #bbb">
       <p>
         &copy; <span id="footer-year"></span> Mohamed Melek Chtourou. Tous
         droits réservés.
@@ -54,40 +82,4 @@
       if (el) el.textContent = y;
     })();
   </script>
-
-  <style>
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 25px;
-      margin-bottom: 20px;
-    }
-
-    .social-icons a {
-      color: #eee;
-      font-size: 1.8rem;
-      transition: color 0.3s, transform 0.3s;
-    }
-
-    .social-icons a:hover {
-      color: #fff;
-      transform: scale(1.2);
-    }
-
-    /* Sur grand écran, on les rend un peu plus grandes et lumineuses */
-    @media (min-width: 992px) {
-      .social-icons a {
-        font-size: 2rem;
-        color: #f5f5f5;
-      }
-    }
-
-    /* Sur mobile, elles restent en ligne (déjà géré par flex) mais on réduit un peu la taille */
-    @media (max-width: 576px) {
-      .social-icons a {
-        font-size: 1.6rem;
-      }
-    }
-  </style>
 </footer>
