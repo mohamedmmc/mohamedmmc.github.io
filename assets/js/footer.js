@@ -5,16 +5,16 @@
     <section id="contact-section" style="padding: 100px 0; background: #0a0a0a">
       <div class="container">
         <div class="text-center" style="margin-bottom: 60px">
-          <h2 class="section-title">CONTACTEZ-MOI</h2>
+          <h2 class="section-title" data-i18n="contact_title">CONTACTEZ-MOI</h2>
           <div class="section-divider"></div>
-          <p class="section-subtitle">
+          <p class="section-subtitle" data-i18n="contact_subtitle">
             Vous avez un projet en tête ? Discutons-en !
           </p>
         </div>
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <div class="contact-cta">
-              <p class="contact-text">
+              <p class="contact-text" data-i18n="contact_text">
                 Je suis toujours ouvert à de nouvelles opportunités et
                 collaborations. N'hésitez pas à me contacter pour discuter de vos
                 projets.
@@ -24,7 +24,7 @@
                   href="mailto:contact@melekchtourou.com"
                   class="cybr-btn contact-btn"
                 >
-                  <i class="fa fa-envelope"></i> M'envoyer un email
+                  <i class="fa fa-envelope"></i> <span data-i18n="contact_cta">M'envoyer un email</span>
                   <span aria-hidden class="cybr-btn__glitch">EMAIL</span>
                 </a>
               </div>
@@ -72,8 +72,8 @@
       <div class="container">
         <div style="text-align: center; color: #bbb">
           <p>
-            &copy; <span id="footer-year"></span> Mohamed Melek Chtourou. Tous
-            droits réservés.
+            &copy; <span id="footer-year"></span> Mohamed Melek Chtourou. <span data-i18n="footer_rights">Tous
+            droits réservés.</span>
           </p>
         </div>
       </div>
@@ -90,6 +90,11 @@
       const yearElement = document.getElementById('footer-year');
       if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
+      }
+
+      // Re-initialize translations if LanguageManager is available
+      if (window.LanguageManager) {
+        window.LanguageManager.updateLanguage(window.LanguageManager.currentLanguage);
       }
     }
   }

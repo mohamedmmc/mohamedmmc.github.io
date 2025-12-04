@@ -43,7 +43,12 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
 
@@ -66,17 +71,16 @@ hr {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
-  padding: 20px 0;
+  padding: 25px 0;
   transition: all 0.3s ease;
-  transform: translateY(-100%);
+  box-shadow: 0 2px 20px rgba(139, 17, 8, 0.3);
 }
 
 .main-nav.scrolled {
-  transform: translateY(0);
-  background: rgba(0, 0, 0, 0.95);
-  box-shadow: 0 2px 20px rgba(139, 17, 8, 0.3);
+  background: rgba(0, 0, 0, 0.98);
+  box-shadow: 0 2px 25px rgba(139, 17, 8, 0.4);
 }
 
 .nav-content {
@@ -86,7 +90,7 @@ hr {
 }
 
 .nav-logo {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 800;
   color: #fff;
   text-decoration: none;
@@ -104,26 +108,30 @@ hr {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 40px;
+  gap: 50px;
+  align-items: center;
 }
 
 .nav-menu li {
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .nav-menu a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: 1px;
   transition: all 0.3s ease;
   position: relative;
   padding: 5px 0;
+  display: inline-block;
 }
 
 .nav-menu a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -159,6 +167,41 @@ hr {
   transition: all 0.3s ease;
 }
 
+/* Language Selector */
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.lang-btn:hover {
+  transform: scale(1.1);
+  border-color: rgba(139, 17, 8, 0.5);
+}
+
+.lang-btn.active {
+  border-color: rgba(139, 17, 8, 0.8);
+  background: rgba(139, 17, 8, 0.1);
+  box-shadow: 0 0 10px rgba(139, 17, 8, 0.3);
+}
+
 /* ==========================================================================
    Canvas Background
    ========================================================================== */
@@ -189,6 +232,7 @@ hr {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-top: 80px;
 }
 
 #imgdiv {
@@ -267,7 +311,7 @@ hr {
 }
 
 .profile-image-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: -10px;
@@ -301,16 +345,96 @@ hr {
   --label-size: 9px;
   --shadow-secondary-hue: 60;
   --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
-  --clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 70%);
+  --clip: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    95% 100%,
+    95% 90%,
+    85% 90%,
+    85% 100%,
+    8% 100%,
+    0 70%
+  );
   --border: 4px;
   --shimmy-distance: 5;
-  --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
-  --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
-  --clip-three: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
-  --clip-four: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
-  --clip-five: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
-  --clip-six: polygon(0 40%, 100% 40%, 100% 85%, 95% 85%, 95% 85%, 85% 85%, 85% 85%, 8% 85%, 0 70%);
-  --clip-seven: polygon(0 63%, 100% 63%, 100% 80%, 95% 80%, 95% 80%, 85% 80%, 85% 80%, 8% 80%, 0 70%);
+  --clip-one: polygon(
+    0 2%,
+    100% 2%,
+    100% 95%,
+    95% 95%,
+    95% 90%,
+    85% 90%,
+    85% 95%,
+    8% 95%,
+    0 70%
+  );
+  --clip-two: polygon(
+    0 78%,
+    100% 78%,
+    100% 100%,
+    95% 100%,
+    95% 90%,
+    85% 90%,
+    85% 100%,
+    8% 100%,
+    0 78%
+  );
+  --clip-three: polygon(
+    0 44%,
+    100% 44%,
+    100% 54%,
+    95% 54%,
+    95% 54%,
+    85% 54%,
+    85% 54%,
+    8% 54%,
+    0 54%
+  );
+  --clip-four: polygon(
+    0 0,
+    100% 0,
+    100% 0,
+    95% 0,
+    95% 0,
+    85% 0,
+    85% 0,
+    8% 0,
+    0 0
+  );
+  --clip-five: polygon(
+    0 0,
+    100% 0,
+    100% 0,
+    95% 0,
+    95% 0,
+    85% 0,
+    85% 0,
+    8% 0,
+    0 0
+  );
+  --clip-six: polygon(
+    0 40%,
+    100% 40%,
+    100% 85%,
+    95% 85%,
+    95% 85%,
+    85% 85%,
+    85% 85%,
+    8% 85%,
+    0 70%
+  );
+  --clip-seven: polygon(
+    0 63%,
+    100% 63%,
+    100% 80%,
+    95% 80%,
+    95% 80%,
+    85% 80%,
+    85% 80%,
+    8% 80%,
+    0 70%
+  );
 
   font-family: "Cyber", sans-serif;
   color: white;
@@ -387,8 +511,11 @@ hr {
 }
 
 @keyframes glitch {
-  0% { clip-path: var(--clip-one); }
-  2%, 8% {
+  0% {
+    clip-path: var(--clip-one);
+  }
+  2%,
+  8% {
     clip-path: var(--clip-two);
     transform: translate(calc(var(--shimmy-distance) * -1%), 0);
   }
@@ -408,7 +535,8 @@ hr {
     clip-path: var(--clip-three);
     transform: translate(0, 0);
   }
-  14%, 21% {
+  14%,
+  21% {
     clip-path: var(--clip-four);
     transform: translate(calc(var(--shimmy-distance) * 1%), 0);
   }
@@ -420,7 +548,8 @@ hr {
     clip-path: var(--clip-five);
     transform: translate(calc(var(--shimmy-distance) * -1%), 0);
   }
-  35%, 45% {
+  35%,
+  45% {
     clip-path: var(--clip-six);
     transform: translate(calc(var(--shimmy-distance) * -1%));
   }
@@ -440,7 +569,9 @@ hr {
     clip-path: var(--clip-seven);
     transform: translate(0, 0);
   }
-  31%, 61%, 100% {
+  31%,
+  61%,
+  100% {
     clip-path: var(--clip-four);
   }
 }
@@ -505,7 +636,8 @@ hr {
 }
 
 @keyframes blink {
-  from, to {
+  from,
+  to {
     background-color: transparent;
   }
   50% {
@@ -514,8 +646,13 @@ hr {
 }
 
 @keyframes shimmer {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }
 
 @keyframes fadeInUp {
@@ -555,7 +692,11 @@ hr {
 .section-divider {
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, rgba(139, 17, 8, 0.8), rgba(139, 17, 8, 0.3));
+  background: linear-gradient(
+    90deg,
+    rgba(139, 17, 8, 0.8),
+    rgba(139, 17, 8, 0.3)
+  );
   margin: 20px auto;
   border-radius: 2px;
 }
@@ -564,6 +705,26 @@ hr {
   font-size: 1.8rem;
   color: rgba(255, 255, 255, 0.7);
   margin-top: 15px;
+}
+
+/* ==========================================================================
+   Section Scroll Offset (pour éviter que la navbar cache le contenu)
+   ========================================================================== */
+
+section {
+  scroll-margin-top: 120px;
+}
+
+#works {
+  scroll-margin-top: 120px;
+}
+
+#about {
+  scroll-margin-top: 120px;
+}
+
+#contact-section {
+  scroll-margin-top: 120px;
 }
 
 /* ==========================================================================
@@ -594,13 +755,18 @@ hr {
 }
 
 .skill-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(139, 17, 8, 0.1), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 17, 8, 0.1),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -666,13 +832,17 @@ hr {
 }
 
 .project-card::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(139, 17, 8, 0.2), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(
+    135deg,
+    rgba(139, 17, 8, 0.2),
+    rgba(0, 0, 0, 0.5)
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -767,7 +937,14 @@ hr {
 }
 
 .social-link.instagram:hover {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
   border-color: #e6683c;
 }
 
@@ -829,6 +1006,7 @@ hr {
     padding: 20px 0;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
+    z-index: 999;
   }
 
   .nav-menu.active {
@@ -845,12 +1023,32 @@ hr {
     font-size: 1.5rem;
   }
 
+  /* Réorganiser l'ordre sur mobile: photo d'abord */
+  #block .row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  /* Photo plus petite et centrée */
+  .profile-image-container {
+    max-width: 300px;
+    margin: 0 auto 40px auto;
+  }
+
+  .profile-image {
+    max-height: 300px;
+  }
+
+  /* Nom complet visible */
   .name-text {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
+    line-height: 1.3;
+    word-break: break-word;
   }
 
   .greeting-text {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
   }
 
   .section-title {
@@ -862,11 +1060,17 @@ hr {
   }
 
   .hero-description {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin: 25px 0;
   }
 
   #text {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+
+  #typing-container {
+    margin-bottom: 20px;
   }
 
   .about-text {
@@ -894,6 +1098,7 @@ hr {
   .hero-buttons {
     flex-direction: column;
     align-items: stretch;
+    margin-top: 30px;
   }
 
   .cybr-btn {
@@ -913,6 +1118,16 @@ hr {
     height: 70px;
     font-size: 2rem;
   }
+
+  /* Ajuster le padding du hero content */
+  .hero-content {
+    padding: 20px;
+  }
+
+  /* Padding top pour éviter que navbar cache la photo */
+  #block {
+    padding-top: 100px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -927,12 +1142,25 @@ hr {
 }
 
 @media (max-width: 576px) {
+  /* Photo encore plus petite sur très petit écran */
+  .profile-image-container {
+    max-width: 250px;
+    margin: 0 auto 30px auto;
+  }
+
+  .profile-image {
+    max-height: 250px;
+  }
+
+  /* Nom avec taille optimisée */
   .name-text {
-    font-size: 3rem;
+    font-size: 2.2rem;
+    line-height: 1.2;
   }
 
   .greeting-text {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
   }
 
   .section-title {
@@ -941,40 +1169,47 @@ hr {
 
   #block {
     font-size: 6vmin;
+    padding: 100px 0 20px 0;
   }
 
   #text {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  #cursor {
+    height: 28px;
   }
 
   .hero-description {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 20px 0;
   }
 
   .about-text {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .section-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .contact-text {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .skill-card h4 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 
   .skill-card p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .cybr-btn {
-    --font-size: 1.3rem;
-    padding: 16px 30px;
-    min-height: 65px;
+    --font-size: 1.2rem;
+    padding: 15px 25px;
+    min-height: 60px;
   }
 
   .social-link {

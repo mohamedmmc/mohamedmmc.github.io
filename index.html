@@ -65,13 +65,18 @@
         <div class="row align-items-center">
           <div id="imgdiv" class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
             <div class="hero-content">
-              <h3 class="greeting-text">BONJOUR, JE M'APPELLE</h3>
-              <h1 class="name-text">MELEK CHTOUROU</h1>
+              <h3 class="greeting-text" data-i18n="hero_greeting">
+                BONJOUR, JE M'APPELLE
+              </h3>
+              <h1 class="name-text">
+                MOHAMED MELEK<br />
+                CHTOUROU
+              </h1>
               <div id="typing-container">
                 <div id="text"></div>
                 <div id="cursor"></div>
               </div>
-              <p class="hero-description">
+              <p class="hero-description" data-i18n="hero_description">
                 Ingénieur FullStack passionné par la création d'expériences
                 numériques innovantes. Découvrez mes projets et n'hésitez pas à
                 me contacter pour collaborer.
@@ -83,12 +88,24 @@
                   onclick="window.open('contactform/cv.pdf')"
                 >
                   <a href="contactform/cv.pdf" download="Melek Chtourou"></a>
-                  Télécharger le CV<span aria-hidden></span>
-                  <span aria-hidden class="cybr-btn__glitch">CV</span>
+                  <span data-i18n="hero_download_cv">Télécharger le CV</span
+                  ><span aria-hidden></span>
+                  <span
+                    aria-hidden
+                    class="cybr-btn__glitch"
+                    data-i18n="hero_cv_glitch"
+                    >CV</span
+                  >
                 </button>
                 <a href="#works" class="cybr-btn">
-                  Voir mes projets<span aria-hidden></span>
-                  <span aria-hidden class="cybr-btn__glitch">PROJETS</span>
+                  <span data-i18n="hero_view_projects">Voir mes projets</span
+                  ><span aria-hidden></span>
+                  <span
+                    aria-hidden
+                    class="cybr-btn__glitch"
+                    data-i18n="hero_projects_glitch"
+                    >PROJETS</span
+                  >
                 </a>
               </div>
             </div>
@@ -107,7 +124,7 @@
     </div>
     <div>
       <section id="section05" class="demo">
-        <a href="#about"><span></span>Faire défiler</a>
+        <a href="#about"><span></span></a>
       </section>
     </div>
     <!-- /container -->
@@ -116,12 +133,12 @@
     <section id="about" style="padding: 100px 0; background: #0a0a0a">
       <div class="container">
         <div class="text-center" style="margin-bottom: 60px">
-          <h2 class="section-title">À PROPOS</h2>
+          <h2 class="section-title" data-i18n="about_title">À PROPOS</h2>
           <div class="section-divider"></div>
         </div>
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
-            <p class="about-text">
+            <p class="about-text" data-i18n="about_text">
               Passionné par le développement web et mobile, je transforme des
               idées en solutions digitales élégantes et performantes. Avec une
               expertise en développement full-stack, je crée des applications
@@ -168,9 +185,9 @@
     <section id="works" style="padding: 100px 0">
       <div class="container">
         <div class="text-center" style="margin-bottom: 60px">
-          <h2 class="section-title">MES PROJETS</h2>
+          <h2 class="section-title" data-i18n="projects_title">MES PROJETS</h2>
           <div class="section-divider"></div>
-          <p class="section-subtitle">
+          <p class="section-subtitle" data-i18n="projects_subtitle">
             Découvrez une sélection de mes réalisations récentes
           </p>
         </div>
@@ -239,5 +256,7 @@
     <script src="assets/js/navbar.js"></script>
     <!-- Footer Template -->
     <script src="assets/js/footer.js"></script>
+    <!-- Translations -->
+    <script src="assets/js/translations.js"></script>
   </body>
 </html>
