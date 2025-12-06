@@ -121,7 +121,7 @@ hr {
 .nav-menu a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: 500;
   letter-spacing: 1px;
   transition: all 0.3s ease;
@@ -237,14 +237,17 @@ hr {
 
 #imgdiv {
   max-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-content {
   animation: fadeInUp 1s ease-out;
+  max-width: 720px;
 }
 
 .greeting-text {
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   letter-spacing: 3px;
   margin-bottom: 20px;
   color: rgba(255, 255, 255, 0.9);
@@ -252,7 +255,7 @@ hr {
 }
 
 .name-text {
-  font-size: 6rem;
+  font-size: 7.5rem;
   font-weight: 800;
   margin-bottom: 30px;
   background: linear-gradient(135deg, #fff 0%, rgba(139, 17, 8, 0.8) 100%);
@@ -276,7 +279,7 @@ hr {
   display: inline;
   color: rgb(255, 255, 255);
   letter-spacing: 2px;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 #cursor {
@@ -289,7 +292,7 @@ hr {
 }
 
 .hero-description {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.8);
   margin: 40px 0;
@@ -308,24 +311,29 @@ hr {
 .profile-image-container {
   position: relative;
   animation: fadeIn 1.5s ease-out;
+  width: clamp(320px, 32vw, 440px);
+  height: clamp(320px, 32vw, 440px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .profile-image-container::before {
   content: "";
   position: absolute;
-  top: -10px;
-  left: -10px;
-  right: 10px;
-  bottom: 10px;
-  border: 2px solid rgba(139, 17, 8, 0.3);
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid rgba(139, 17, 8, 0.3); */
   border-radius: 10%;
   z-index: -1;
+  transform: translate(10px, 10px);
 }
 
 .profile-image {
-  max-width: 100%;
-  max-height: 800px;
-  height: auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   border-radius: 10%;
   filter: drop-shadow(8px 8px 10px rgba(218, 25, 11, 0.316));
 }
@@ -340,7 +348,7 @@ hr {
   --primary-hue: 0;
   --primary-lightness: 50;
   --color: hsl(0, 0%, 93%);
-  --font-size: 1.6rem;
+  --font-size: 1.9rem;
   --shadow-primary-hue: 180;
   --label-size: 9px;
   --shadow-secondary-hue: 60;
@@ -680,7 +688,7 @@ hr {
    ========================================================================== */
 
 .section-title {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: 3px;
@@ -702,9 +710,172 @@ hr {
 }
 
 .section-subtitle {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   color: rgba(255, 255, 255, 0.7);
   margin-top: 15px;
+}
+
+/* ==========================================================================
+   Language Change Animation
+   ========================================================================== */
+
+@keyframes languageGlitch {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  10% {
+    opacity: 0.8;
+    transform: translateX(-5px) skew(-2deg);
+  }
+  20% {
+    opacity: 0.6;
+    transform: translateX(5px) skew(2deg);
+  }
+  30% {
+    opacity: 0.4;
+    transform: translateX(-3px) skew(-1deg);
+  }
+  40% {
+    opacity: 0.5;
+    transform: translateX(3px) skew(1deg);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateX(-2px) skew(-0.5deg);
+  }
+  60% {
+    opacity: 0.2;
+    transform: translateX(2px) skew(0.5deg);
+  }
+  70% {
+    opacity: 0.1;
+    transform: translateX(-1px);
+  }
+  80% {
+    opacity: 0;
+    transform: translateX(0) scaleY(0.1);
+  }
+  90% {
+    opacity: 0.5;
+    transform: translateX(0) scaleY(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scaleY(1);
+  }
+}
+
+.language-transition {
+  animation: none;
+}
+
+.language-transition.glitching {
+  animation: textGlitchEffect 2s ease-in-out;
+}
+
+@keyframes textGlitchEffect {
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  10% {
+    opacity: 0.9;
+    text-shadow: 2px 0 red, -2px 0 blue;
+  }
+  20% {
+    opacity: 0.7;
+    text-shadow: -2px 0 red, 2px 0 blue;
+  }
+  30% {
+    opacity: 0.5;
+    text-shadow: 3px 0 red, -3px 0 cyan;
+  }
+  40% {
+    opacity: 0.6;
+    text-shadow: -3px 0 cyan, 3px 0 red;
+  }
+  50% {
+    opacity: 0.3;
+    text-shadow: 2px 2px red, -2px -2px blue;
+  }
+  60% {
+    opacity: 0.4;
+    text-shadow: -2px 2px cyan, 2px -2px red;
+  }
+  70% {
+    opacity: 0.2;
+    text-shadow: 4px 0 red, -4px 0 blue;
+  }
+  80% {
+    opacity: 0.1;
+    text-shadow: none;
+  }
+  90% {
+    opacity: 0.6;
+    text-shadow: 1px 0 red, -1px 0 blue;
+  }
+}
+
+.glitching {
+  animation: textGlitchEffect 2s ease-in-out;
+}
+
+.name-glitch.glitching {
+  animation: nameFlash 1.2s ease-in-out;
+}
+
+@keyframes nameFlash {
+  0% {
+    opacity: 1;
+    transform: translateX(0) skewX(0deg) scaleX(1) scaleY(1);
+    letter-spacing: 0;
+    filter: blur(0);
+    background-position: 0% 50%;
+  }
+  12% {
+    opacity: 0.96;
+    transform: translateX(-2px) skewX(-4deg) scaleX(1.03) scaleY(0.99);
+    letter-spacing: 0.04em;
+    filter: blur(0.25px);
+    background-position: 35% 45%;
+  }
+  28% {
+    opacity: 1;
+    transform: translateX(3px) skewX(6deg) scaleX(1.05) scaleY(0.98);
+    letter-spacing: 0.07em;
+    filter: blur(0.35px);
+    background-position: 70% 55%;
+  }
+  45% {
+    opacity: 0.94;
+    transform: translateX(-3px) skewX(-5deg) scaleX(1.04) scaleY(0.97);
+    letter-spacing: 0.06em;
+    filter: blur(0.4px);
+    background-position: 50% 52%;
+  }
+  62% {
+    opacity: 1;
+    transform: translateX(2px) skewX(4deg) scaleX(1.03) scaleY(0.99);
+    letter-spacing: 0.05em;
+    filter: blur(0.3px);
+    background-position: 85% 48%;
+  }
+  80% {
+    opacity: 0.95;
+    transform: translateX(-2px) skewX(-3deg) scaleX(1.02) scaleY(0.995);
+    letter-spacing: 0.03em;
+    filter: blur(0.2px);
+    background-position: 60% 50%;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) skewX(0deg) scaleX(1) scaleY(1);
+    letter-spacing: 0;
+    filter: blur(0);
+    background-position: 0% 50%;
+  }
 }
 
 /* ==========================================================================
@@ -732,7 +903,7 @@ section {
    ========================================================================== */
 
 .about-text {
-  font-size: 1.9rem;
+  font-size: 2.3rem;
   line-height: 2;
   color: rgba(255, 255, 255, 0.85);
   text-align: center;
@@ -793,7 +964,7 @@ section {
 }
 
 .skill-card h4 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #fff;
   margin: 15px 0 10px;
   font-weight: 600;
@@ -801,7 +972,7 @@ section {
 
 .skill-card p {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   margin: 0;
 }
 
@@ -878,7 +1049,7 @@ section {
 }
 
 .contact-text {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 40px;
@@ -952,7 +1123,115 @@ section {
    Responsive Design
    ========================================================================== */
 
+/* Desktop Layout - Row with text on left, image on right */
+@media (min-width: 992px) {
+  #block .row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  #imgdiv {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .hero-content {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .hero-description {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+
+  #block .col-lg-4 {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-image-container {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    max-width: 440px;
+    max-height: 600px;
+  }
+}
+
+@media (max-width: 1100px) {
+  #block {
+    padding: 120px 20px 80px;
+  }
+
+  .hero-content {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-description {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .profile-image-container {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 991px) {
+  #block .row {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .hero-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+  }
+
+  .profile-image-container {
+    width: clamp(320px, 45vw, 420px);
+    height: clamp(320px, 45vw, 420px);
+    margin: 0 auto;
+  }
+
   .name-text {
     font-size: 4.5rem;
   }
@@ -1020,19 +1299,20 @@ section {
   }
 
   .nav-menu a {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   /* Réorganiser l'ordre sur mobile: photo d'abord */
   #block .row {
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
   }
 
   /* Photo plus petite et centrée */
   .profile-image-container {
     max-width: 300px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 20px auto;
   }
 
   .profile-image {
@@ -1041,32 +1321,36 @@ section {
 
   /* Nom complet visible */
   .name-text {
-    font-size: 2.8rem;
+    font-size: 4.5rem;
     line-height: 1.3;
     word-break: break-word;
   }
 
   .greeting-text {
-    font-size: 1.6rem;
+    font-size: 2.5rem;
     margin-bottom: 15px;
   }
 
   .section-title {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .section-subtitle {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .hero-description {
-    font-size: 1.4rem;
+    font-size: 2rem;
     line-height: 1.6;
     margin: 25px 0;
   }
 
   #text {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
+  }
+
+  #cursor {
+    height: 42px;
   }
 
   #typing-container {
@@ -1074,25 +1358,25 @@ section {
   }
 
   .about-text {
-    font-size: 1.6rem;
+    font-size: 2.1rem;
   }
 
   .contact-text {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .skill-card h4 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
   .skill-card p {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
 
   .cybr-btn {
-    --font-size: 1.4rem;
-    padding: 18px 35px;
-    min-height: 70px;
+    --font-size: 1.8rem;
+    padding: 20px 40px;
+    min-height: 75px;
   }
 
   .hero-buttons {
@@ -1122,22 +1406,13 @@ section {
   /* Ajuster le padding du hero content */
   .hero-content {
     padding: 20px;
+    text-align: center;
+    margin: 0 auto;
   }
 
   /* Padding top pour éviter que navbar cache la photo */
   #block {
     padding-top: 100px;
-  }
-}
-
-@media (max-width: 600px) {
-  .project-card {
-    width: 85%;
-    margin: 0 auto;
-  }
-
-  .project-image {
-    max-width: 140px;
   }
 }
 
@@ -1154,62 +1429,62 @@ section {
 
   /* Nom avec taille optimisée */
   .name-text {
-    font-size: 2.2rem;
+    font-size: 3.5rem;
     line-height: 1.2;
   }
 
   .greeting-text {
-    font-size: 1.3rem;
+    font-size: 2rem;
     margin-bottom: 10px;
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 
   #block {
     font-size: 6vmin;
-    padding: 100px 0 20px 0;
+    padding: 100px 15px 20px 15px;
   }
 
   #text {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
   }
 
   #cursor {
-    height: 28px;
+    height: 35px;
   }
 
   .hero-description {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     line-height: 1.5;
     margin: 20px 0;
   }
 
   .about-text {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
   }
 
   .section-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
 
   .contact-text {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
 
   .skill-card h4 {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .skill-card p {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
   }
 
   .cybr-btn {
-    --font-size: 1.2rem;
-    padding: 15px 25px;
-    min-height: 60px;
+    --font-size: 1.6rem;
+    padding: 18px 30px;
+    min-height: 70px;
   }
 
   .social-link {

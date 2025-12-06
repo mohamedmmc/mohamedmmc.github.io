@@ -155,6 +155,28 @@ var _PART_INDEX = 0;
 var _ELEMENT = document.querySelector("#text");
 var _CURSOR = document.querySelector("#cursor");
 var _INTERVAL_VAL;
+var _TIMEOUTS = [];
+
+function scheduleTimeout(fn, delay) {
+  const id = setTimeout(fn, delay);
+  _TIMEOUTS.push(id);
+  return id;
+}
+
+function clearAllTimeouts() {
+  _TIMEOUTS.forEach((id) => clearTimeout(id));
+  _TIMEOUTS = [];
+}
+
+function stopTyping() {
+  clearInterval(_INTERVAL_VAL);
+  clearAllTimeouts();
+}
+
+function startTyping() {
+  stopTyping();
+  _INTERVAL_VAL = setInterval(Type, 110);
+}
 
 // Fonction dactylographie
 function Type() {
@@ -164,9 +186,9 @@ function Type() {
 
   if (text === _CONTENT[_PART]) {
     clearInterval(_INTERVAL_VAL);
-    setTimeout(function () {
-      _INTERVAL_VAL = setInterval(Delete, 50);
-    }, 1200);
+    scheduleTimeout(function () {
+      _INTERVAL_VAL = setInterval(Delete, 60);
+    }, 1500);
   }
 }
 
@@ -184,16 +206,28 @@ function Delete() {
     _PART = (_PART + 1) % _CONTENT.length;
     _PART_INDEX = 0;
 
-    setTimeout(function () {
-      _INTERVAL_VAL = setInterval(Type, 100);
-    }, 400);
+    scheduleTimeout(function () {
+      _INTERVAL_VAL = setInterval(Type, 110);
+    }, 700);
   }
 }
 
 // Lancer au démarrage
 document.addEventListener("DOMContentLoaded", function () {
-  _INTERVAL_VAL = setInterval(Type, 100);
+  startTyping();
 });
+
+// Permet de mettre à jour le contenu tapé quand la langue change
+window.setTypingContent = function (newContent) {
+  if (!Array.isArray(newContent) || newContent.length === 0) return;
+  stopTyping();
+  _CONTENT = newContent;
+  _PART = 0;
+  _PART_INDEX = 0;
+  _ELEMENT.innerHTML = "";
+  _CURSOR.style.display = "inline-block";
+  startTyping();
+};
 
 // Navigation scroll behavior
 window.addEventListener("scroll", function () {

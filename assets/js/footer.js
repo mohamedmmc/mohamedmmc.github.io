@@ -24,7 +24,7 @@
                   href="mailto:contact@melekchtourou.com"
                   class="cybr-btn contact-btn"
                 >
-                  <i class="fa fa-envelope"></i> <span data-i18n="contact_cta">M'envoyer un email</span>
+                  <i class="fa fa-envelope language-transition"></i> <span data-i18n="contact_cta">M'envoyer un email</span>
                   <span aria-hidden class="cybr-btn__glitch">EMAIL</span>
                 </a>
               </div>
@@ -33,7 +33,7 @@
                   href="https://github.com/mohamedmmc"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="social-link github"
+                  class="social-link github language-transition"
                 >
                   <i class="fa fa-github"></i>
                 </a>
@@ -41,7 +41,7 @@
                   href="https://www.linkedin.com/in/mohamed-melek-chtourou-a6a2561b2/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="social-link linkedin"
+                  class="social-link linkedin language-transition"
                 >
                   <i class="fa fa-linkedin"></i>
                 </a>
@@ -49,7 +49,7 @@
                   href="https://www.facebook.com/tiktikatikadesuka"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="social-link facebook"
+                  class="social-link facebook language-transition"
                 >
                   <i class="fa fa-facebook"></i>
                 </a>
@@ -57,7 +57,7 @@
                   href="https://www.instagram.com/mohamed_chtourou93/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="social-link instagram"
+                  class="social-link instagram language-transition"
                 >
                   <i class="fa fa-instagram"></i>
                 </a>
@@ -71,7 +71,7 @@
     <footer id="site-footer" role="contentinfo" style="background: #000; color: #eee; padding: 40px 0">
       <div class="container">
         <div style="text-align: center; color: #bbb">
-          <p>
+          <p class="language-transition">
             &copy; <span id="footer-year"></span> Mohamed Melek Chtourou. <span data-i18n="footer_rights">Tous
             droits réservés.</span>
           </p>
