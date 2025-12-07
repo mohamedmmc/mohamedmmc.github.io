@@ -288,6 +288,14 @@ const LanguageManager = {
         e.preventDefault();
         const lang = button.getAttribute("data-language");
         this.updateLanguage(lang, true); // true = show animation when user clicks
+
+        // Close mobile menu when language is changed
+        const navMenu = document.querySelector('.nav-menu');
+        const navToggle = document.getElementById('navToggle');
+        if (navMenu && navToggle) {
+          navMenu.classList.remove('active');
+          navToggle.classList.remove('active');
+        }
       });
     });
   },
