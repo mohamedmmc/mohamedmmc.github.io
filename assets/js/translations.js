@@ -18,7 +18,12 @@ const translations = {
     hero_cv_glitch: "CV",
     hero_view_projects: "Voir mes projets",
     hero_projects_glitch: "PROJETS",
-    hero_typing: ["Un Geek", "Un Ingénieur FullStack", "Un Artiste", "Un Gamer"],
+    hero_typing: [
+      "Un Geek",
+      "Un Ingénieur FullStack",
+      "Un Artiste",
+      "Un Gamer",
+    ],
 
     // About Section
     about_title: "À PROPOS",
@@ -268,10 +273,12 @@ const translations = {
 // Language manager
 const LanguageManager = {
   currentLanguage: localStorage.getItem("language") || "fr",
+  isInitialLoad: true,
 
   init() {
-    this.updateLanguage(this.currentLanguage);
+    this.updateLanguage(this.currentLanguage, false); // false = no animation on initial load
     this.setupLanguageSelector();
+    this.isInitialLoad = false;
   },
 
   setupLanguageSelector() {
@@ -280,12 +287,12 @@ const LanguageManager = {
       button.addEventListener("click", (e) => {
         e.preventDefault();
         const lang = button.getAttribute("data-language");
-        this.updateLanguage(lang);
+        this.updateLanguage(lang, true); // true = show animation when user clicks
       });
     });
   },
 
-  updateLanguage(lang) {
+  updateLanguage(lang, showAnimation = true) {
     this.currentLanguage = lang;
     localStorage.setItem("language", lang);
 
@@ -294,70 +301,81 @@ const LanguageManager = {
       ...document.querySelectorAll("[data-i18n]"),
       ...document.querySelectorAll("[data-i18n-list]"),
       ...document.querySelectorAll("[data-i18n-list] li"),
-      ...document.querySelectorAll(".language-transition")
+      ...document.querySelectorAll(".language-transition"),
+      ...document.querySelectorAll(".project-card"),
+      ...document.querySelectorAll(".tech-badge"),
+      ...document.querySelectorAll(".profile-image-container"),
     ];
 
-    // Force-restart animations so they play on every language change
-    translatableElements.forEach((element) => {
-      element.classList.remove("glitching");
-      element.style.animation = "none";
-      // force reflow to reset animation state
-      void element.offsetWidth;
-      element.style.animation = "";
-    });
+    // Only show animation if requested (not on initial load)
+    if (showAnimation) {
+      // Force-restart animations so they play on every language change
+      translatableElements.forEach((element) => {
+        element.classList.remove("glitching");
+        element.style.animation = "none";
+        // force reflow to reset animation state
+        void element.offsetWidth;
+        element.style.animation = "";
+      });
 
-    // Add glitching class to all elements
-    translatableElements.forEach(element => {
-      element.classList.add("glitching");
-    });
+      // Add glitching class to all elements
+      translatableElements.forEach((element) => {
+        element.classList.add("glitching");
+      });
+    }
 
-    // Wait for animation to complete before updating text
-    setTimeout(() => {
-      // Update all elements with data-i18n attribute
-      document.querySelectorAll("[data-i18n]").forEach((element) => {
-        const key = element.getAttribute("data-i18n");
-        const translation = this.getTranslation(key);
+    // Wait for animation to complete before updating text (or update immediately if no animation)
+    setTimeout(
+      () => {
+        // Update all elements with data-i18n attribute
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+          const translation = this.getTranslation(key);
 
-        if (translation) {
-          // Check if it's an input placeholder
-          if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
-            element.placeholder = translation;
-          } else {
-            element.textContent = translation;
+          if (translation) {
+            // Check if it's an input placeholder
+            if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+              element.placeholder = translation;
+            } else {
+              element.textContent = translation;
+            }
+          }
+        });
+
+        // Update list items with data-i18n-list
+        document.querySelectorAll("[data-i18n-list]").forEach((list) => {
+          const key = list.getAttribute("data-i18n-list");
+          const translations = this.getTranslation(key);
+
+          if (Array.isArray(translations)) {
+            const items = list.querySelectorAll("li");
+            translations.forEach((text, index) => {
+              if (items[index]) {
+                items[index].textContent = text;
+              }
+            });
+          }
+        });
+
+        // Update typing animation content if available
+        if (window.setTypingContent) {
+          const typingContent = this.getTranslation("hero_typing");
+          if (Array.isArray(typingContent)) {
+            window.setTypingContent(typingContent);
           }
         }
-      });
 
-      // Update list items with data-i18n-list
-      document.querySelectorAll("[data-i18n-list]").forEach((list) => {
-        const key = list.getAttribute("data-i18n-list");
-        const translations = this.getTranslation(key);
-
-        if (Array.isArray(translations)) {
-          const items = list.querySelectorAll("li");
-          translations.forEach((text, index) => {
-            if (items[index]) {
-              items[index].textContent = text;
-            }
-          });
+        // Remove glitching class after animation (only if animation was shown)
+        if (showAnimation) {
+          setTimeout(() => {
+            translatableElements.forEach((element) => {
+              element.classList.remove("glitching");
+            });
+          }, 100);
         }
-      });
-
-      // Update typing animation content if available
-      if (window.setTypingContent) {
-        const typingContent = this.getTranslation("hero_typing");
-        if (Array.isArray(typingContent)) {
-          window.setTypingContent(typingContent);
-        }
-      }
-
-      // Remove glitching class after animation
-      setTimeout(() => {
-        translatableElements.forEach(element => {
-          element.classList.remove("glitching");
-        });
-      }, 100);
-    }, 1600); // Change text at 80% of animation (1.6s out of 2s)
+      },
+      showAnimation ? 1600 : 0
+    ); // Wait for animation only if showing it
 
     // Update active language indicator
     document.querySelectorAll("[data-language]").forEach((button) => {

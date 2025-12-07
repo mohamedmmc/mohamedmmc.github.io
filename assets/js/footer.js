@@ -94,7 +94,7 @@
 
       // Re-initialize translations if LanguageManager is available
       if (window.LanguageManager) {
-        window.LanguageManager.updateLanguage(window.LanguageManager.currentLanguage);
+        window.LanguageManager.updateLanguage(window.LanguageManager.currentLanguage, false);
       }
     }
   }
