@@ -1,0 +1,17 @@
+# robots.txt for https://mohamedmmc.github.io/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mohamedmmc.github.io/sitemap.xml
+
+# Disallow crawling of assets that don't need indexing
+Disallow: /assets/lib/
+Disallow: /contactform/
+
+# Allow all other content
+Allow: /assets/img/
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /pages/

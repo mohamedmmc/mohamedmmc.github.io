@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CPH7RV6E5M"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-CPH7RV6E5M");
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>Tesa - Application Mobile Esport | Mohamed Melek Chtourou</title>
+    <meta name="title" content="Tesa - Application Mobile Esport | Mohamed Melek Chtourou" />
+    <meta name="description" content="Tesa est une application mobile qui centralise l'écosystème esport : résultats, vidéos et profils joueurs. Développée avec Flutter et Node.js." />
+    <meta name="keywords" content="Tesa, Esport, Application Mobile, Flutter, Node.js, MySQL, Challonge API, Portfolio Mohamed Melek Chtourou" />
+    <meta name="author" content="Mohamed Melek Chtourou" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://mohamedmmc.github.io/pages/projects/tesa.html" />
+    <meta property="og:title" content="Tesa - Application Mobile Esport" />
+    <meta property="og:description" content="Application mobile pour centraliser les résultats et contenus esportifs : recherche, vidéos, classements et profils joueurs." />
+    <meta property="og:image" content="https://mohamedmmc.github.io/assets/img/portfolio/Tesa/TesaLogo.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:site_name" content="Mohamed Melek Chtourou Portfolio" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://mohamedmmc.github.io/pages/projects/tesa.html" />
+    <meta property="twitter:title" content="Tesa - Application Mobile Esport" />
+    <meta property="twitter:description" content="Application mobile pour centraliser les résultats et contenus esportifs." />
+    <meta property="twitter:image" content="https://mohamedmmc.github.io/assets/img/portfolio/Tesa/TesaLogo.png" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mohamedmmc.github.io/pages/projects/tesa.html" />
+
+    <!-- Favicons -->
+    <link href="../../assets/img/favicon.png" rel="icon" />
+    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Poppins:400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS File -->
+    <link href="../../assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+
+    <!-- Libraries CSS Files -->
+    <link href="../../assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- Project wrapper -->
+    <div class="project-wrapper">
+      <div class="project-hero">
+        <div class="project-hero-content">
+          <div class="project-logo-container">
+            <a
+              href="https://thelandlord.tn/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="../../assets/img/portfolio/Tesa/TesaLogo.png" alt="Logo Tesa" />
+            </a>
+          </div>
+          <h1 data-i18n="tesa_title">TESA</h1>
+          <p data-i18n="tesa_subtitle">
+            Application mobile pour centraliser les résultats et contenus
+            esportifs — recherche, vidéos, classements et profils joueurs.
+          </p>
+        </div>
+      </div>
+
+      <section class="project-section">
+        <div class="container">
+          <div class="row project-row">
+            <!-- Left (carousel) -->
+            <div class="col-lg-6 col-md-6">
+              <div class="carousel-container">
+                <div
+                  id="carousel"
+                  class="carousel slide"
+                  data-ride="carousel"
+                  aria-label="Galerie captures Tesa"
+                >
+                  <ol class="carousel-indicators">
+                    <li
+                      data-target="#carousel"
+                      data-slide-to="0"
+                      class="active"
+                    ></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                    <li data-target="#carousel" data-slide-to="3"></li>
+                    <li data-target="#carousel" data-slide-to="4"></li>
+                    <li data-target="#carousel" data-slide-to="5"></li>
+                    <li data-target="#carousel" data-slide-to="6"></li>
+                    <li data-target="#carousel" data-slide-to="7"></li>
+                    <li data-target="#carousel" data-slide-to="8"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img
+                        src="../../assets/img/portfolio/Tesa/home.PNG"
+                        alt="Tesa - écran d'accueil"
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="../../assets/img/portfolio/Tesa/classment_home.PNG"
+                        alt="Tesa - classement sur l'accueil"
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="../../assets/img/portfolio/Tesa/video_home.PNG"
+                        alt="Tesa - vidéos sur l'accueil"
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="../../assets/img/portfolio/Tesa/players.PNG"
+                        alt="Tesa - liste des joueurs"
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="../../assets/img/portfolio/Tesa/ranking.PNG"
+                        alt="Tesa - classements détaillés"
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="../../assets/img/portfolio/Tesa/events.PNG"
+                        alt="Tesa - événements esport"
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="../../assets/img/portfolio/Tesa/profil1.PNG"
+                        alt="Tesa - profil joueur 1"
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="../../assets/img/portfolio/Tesa/profil2.PNG"
+                        alt="Tesa - profil joueur 2"
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="../../assets/img/portfolio/Tesa/contact.PNG"
+                        alt="Tesa - page de contact"
+                      />
+                    </div>
+                  </div>
+                  <a
+                    class="left carousel-control"
+                    href="#carousel"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <span
+                      class="glyphicon glyphicon-chevron-left"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Précédent</span>
+                  </a>
+                  <a
+                    class="right carousel-control"
+                    href="#carousel"
+                    role="button"
+                    data-slide="next"
+                  >
+                    <span
+                      class="glyphicon glyphicon-chevron-right"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Suivant</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right (details) -->
+            <div class="col-lg-6 col-md-6">
+              <div class="feature-card">
+                <h3 data-i18n="project_summary">Résumé</h3>
+                <p data-i18n="tesa_description">
+                  Tesa regroupe l'écosystème esport : résultats, vidéos et
+                  profils. Intégrations avec Challonge et Top Eighter pour
+                  centraliser les données de tournois.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <h4 data-i18n="project_technologies">Technologies</h4>
+                <div>
+                  <span class="tech-badge">Dart / Flutter</span>
+                  <span class="tech-badge">Node.js</span>
+                  <span class="tech-badge">MySQL</span>
+                  <span class="tech-badge">API Challonge</span>
+                </div>
+              </div>
+
+              <div class="feature-card">
+                <h4 data-i18n="project_features">Fonctionnalités clés</h4>
+                <ul data-i18n-list="tesa_features">
+                  <li>Consulter résultats et classements</li>
+                  <li>Regarder vidéos de finales</li>
+                  <li>Recherche avancée de joueurs</li>
+                  <li>
+                    Synchronisation des tournois (Challonge / Top Eighter)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="gallery-section">
+        <div class="container">
+          <h2 class="gallery-title" data-i18n="project_gallery">Galerie</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item" data-image="../../assets/img/portfolio/Tesa/home.PNG">
+              <img src="../../assets/img/portfolio/Tesa/home.PNG" alt="Tesa - Accueil" />
+            </div>
+            <div class="gallery-item" data-image="../../assets/img/portfolio/Tesa/classment_home.PNG">
+              <img src="../../assets/img/portfolio/Tesa/classment_home.PNG" alt="Tesa - Classements" />
+            </div>
+            <div class="gallery-item" data-image="../../assets/img/portfolio/Tesa/video_home.PNG">
+              <img src="../../assets/img/portfolio/Tesa/video_home.PNG" alt="Tesa - Vidéos" />
+            </div>
+            <div class="gallery-item" data-image="../../assets/img/portfolio/Tesa/players.PNG">
+              <img src="../../assets/img/portfolio/Tesa/players.PNG" alt="Tesa - Joueurs" />
+            </div>
+            <div class="gallery-item" data-image="../../assets/img/portfolio/Tesa/ranking.PNG">
+              <img src="../../assets/img/portfolio/Tesa/ranking.PNG" alt="Tesa - Classement détaillé" />
+            </div>
+            <div class="gallery-item" data-image="../../assets/img/portfolio/Tesa/events.PNG">
+              <img src="../../assets/img/portfolio/Tesa/events.PNG" alt="Tesa - Événements" />
+            </div>
+            <div class="gallery-item" data-image="../../assets/img/portfolio/Tesa/profil1.PNG">
+              <img src="../../assets/img/portfolio/Tesa/profil1.PNG" alt="Tesa - Profil joueur 1" />
+            </div>
+            <div class="gallery-item" data-image="../../assets/img/portfolio/Tesa/profil2.PNG">
+              <img src="../../assets/img/portfolio/Tesa/profil2.PNG" alt="Tesa - Profil joueur 2" />
+            </div>
+            <div class="gallery-item" data-image="../../assets/img/portfolio/Tesa/contact.PNG">
+              <img src="../../assets/img/portfolio/Tesa/contact.PNG" alt="Tesa - Contact" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="gallery-modal">
+      <div class="gallery-modal-content">
+        <button class="gallery-modal-close">&times;</button>
+        <span class="gallery-modal-nav gallery-modal-prev">&#10094;</span>
+        <img id="galleryModalImage" src="" alt="" />
+        <span class="gallery-modal-nav gallery-modal-next">&#10095;</span>
+      </div>
+    </div>
+
+    <!-- Image modal -->
+    <div
+      id="imageModal"
+      class="modal fade"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Fermer"
+            >
+              &times;
+            </button>
+            <img
+              id="modalImage"
+              src=""
+              alt=""
+              class="modal-image-display"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- JS Libraries -->
+    <script type="module" src="../../assets/js/firebase-config.js"></script>
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/lib/php-mail-form/validate.js"></script>
+    <script src="../../assets/lib/easing/easing.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <!-- Navbar Template -->
+    <script src="../../assets/js/navbar.js"></script>
+    <!-- Footer Template -->
+    <script src="../../assets/js/footer.js"></script>
+    <!-- Translations -->
+    <script src="../../assets/js/translations.js"></script>
+
+    <!-- Image Modal Script -->
+    <script>
+      $(document).ready(function() {
+        $('.screenshot').on('click', function() {
+          var imgSrc = $(this).attr('src');
+          var imgAlt = $(this).attr('alt');
+          $('#modalImage').attr('src', imgSrc);
+          $('#modalImage').attr('alt', imgAlt);
+        });
+      });
+    </script>
+
+    <!-- Gallery Modal Script -->
+    <script>
+      (function() {
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const modal = document.getElementById('galleryModal');
+        const modalImg = document.getElementById('galleryModalImage');
+        const closeBtn = document.querySelector('.gallery-modal-close');
+        const prevBtn = document.querySelector('.gallery-modal-prev');
+        const nextBtn = document.querySelector('.gallery-modal-next');
+
+        let currentIndex = 0;
+        const images = Array.from(galleryItems).map(item => ({
+          src: item.getAttribute('data-image'),
+          alt: item.querySelector('img').alt
+        }));
+
+        function showImage(index) {
+          currentIndex = index;
+          modalImg.src = images[index].src;
+          modalImg.alt = images[index].alt;
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+
+        function showNext() {
+          currentIndex = (currentIndex + 1) % images.length;
+          modalImg.src = images[currentIndex].src;
+          modalImg.alt = images[currentIndex].alt;
+        }
+
+        function showPrev() {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          modalImg.src = images[currentIndex].src;
+          modalImg.alt = images[currentIndex].alt;
+        }
+
+        galleryItems.forEach((item, index) => {
+          item.addEventListener('click', () => showImage(index));
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+        nextBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          showNext();
+        });
+        prevBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          showPrev();
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (!modal.classList.contains('active')) return;
+          if (e.key === 'Escape') closeModal();
+          if (e.key === 'ArrowRight') showNext();
+          if (e.key === 'ArrowLeft') showPrev();
+        });
+      })();
+    </script>
+  </body>
+</html>
