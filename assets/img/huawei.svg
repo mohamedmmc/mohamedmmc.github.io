@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="564" height="168" viewBox="0 0 564 168">
+  <!-- Background -->
+  <rect width="564" height="168" rx="20" ry="20" fill="#000"/>
+  <rect width="560" height="164" rx="18" ry="18" x="2" y="2" fill="#000" stroke="#555" stroke-width="1.5"/>
+
+  <!-- Huawei AppGallery flower/petal icon -->
+  <g transform="translate(62, 84)">
+    <!-- 8 petals arranged in circle -->
+    <!-- Petal colors: red, orange, yellow, green, cyan, blue, purple, pink -->
+    <ellipse cx="0" cy="-22" rx="8" ry="14" fill="#FF3B30" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-22" rx="8" ry="14" fill="#FF6A00" transform="rotate(45)"/>
+    <ellipse cx="0" cy="-22" rx="8" ry="14" fill="#FFCC00" transform="rotate(90)"/>
+    <ellipse cx="0" cy="-22" rx="8" ry="14" fill="#34C759" transform="rotate(135)"/>
+    <ellipse cx="0" cy="-22" rx="8" ry="14" fill="#30B0C7" transform="rotate(180)"/>
+    <ellipse cx="0" cy="-22" rx="8" ry="14" fill="#007AFF" transform="rotate(225)"/>
+    <ellipse cx="0" cy="-22" rx="8" ry="14" fill="#BF5AF2" transform="rotate(270)"/>
+    <ellipse cx="0" cy="-22" rx="8" ry="14" fill="#FF2D55" transform="rotate(315)"/>
+    <!-- Center circle -->
+    <circle cx="0" cy="0" r="9" fill="#fff"/>
+  </g>
+
+  <!-- "Explore it on" text -->
+  <text x="120" y="68" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#aaa" font-weight="400" letter-spacing="0.5">Explore it on</text>
+
+  <!-- "AppGallery" text -->
+  <text x="120" y="115" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="46" fill="#fff" font-weight="600" letter-spacing="-0.5">AppGallery</text>
+</svg>

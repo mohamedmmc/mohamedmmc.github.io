@@ -57,6 +57,7 @@ const translations = {
     project_gallery: "Galerie",
     project_demo: "Démo",
     project_link: "Lien du site",
+    project_download: "Télécharger l'application",
 
     // The Landlord
     thelandlord_title: "The Landlord",
@@ -189,6 +190,7 @@ const translations = {
     project_gallery: "Gallery",
     project_demo: "Demo",
     project_link: "Website Link",
+    project_download: "Download the App",
 
     // The Landlord
     thelandlord_title: "The Landlord",
