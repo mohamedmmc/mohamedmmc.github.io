@@ -10,8 +10,9 @@ const translations = {
     hero_greeting: "BONJOUR, JE M'APPELLE",
     hero_name: "Mohamed Melek Chtourou",
     hero_title: "Ingénieur en Génie Logiciel",
+    hero_tagline: "Spécialiste Flutter & Node.js | 3 apps publiées sur les stores",
     hero_description:
-      "Ingénieur FullStack passionné par la création d'expériences numériques innovantes. Découvrez mes projets et n'hésitez pas à me contacter pour collaborer.",
+      "Ingénieur spécialisé Flutter & Node.js, je conçois des applications mobiles et web performantes. Découvrez mes projets et n'hésitez pas à me contacter.",
     hero_cta: "Voir mes projets",
     hero_contact: "Me contacter",
     hero_download_cv: "Télécharger le CV",
@@ -29,7 +30,7 @@ const translations = {
     about_title: "À PROPOS",
     about_subtitle: "Découvrez mon parcours et mes compétences",
     about_text:
-      "Passionné par le développement web et mobile, je transforme des idées en solutions digitales élégantes et performantes. Avec une expertise en développement full-stack, je crée des applications qui combinent design moderne et fonctionnalité optimale.",
+      "Ingénieur spécialisé Flutter & Node.js avec une solide expérience fullstack web. J'ai conçu et publié 3 applications sur l'App Store et Google Play, dont The Landlord — une plateforme de gestion immobilière en production. Je cherche à rejoindre une équipe ambitieuse où je pourrai contribuer à des produits mobiles et web impactants.",
 
     // Skills Section
     skills_title: "COMPÉTENCES",
@@ -40,8 +41,24 @@ const translations = {
     projects_subtitle: "Découvrez une sélection de mes réalisations récentes",
 
     // Contact Section
+    // Project card descriptions
+    card_thelandlord: "Plateforme de gestion immobilière",
+    card_lostfound: "App multi-plateforme objets perdus",
+    card_tesa: "Écosystème esport centralisé",
+    card_randev: "Gestion de rendez-vous B2B",
+    card_artisandart: "Communauté d'artisans mobile + web",
+    card_esprit: "App campus iOS native",
+
+    // Project badges
+    badge_production: "En production",
+    badge_personal: "Projet personnel",
+    badge_academic: "Projet académique",
+
+    // Contact Section
     contact_title: "CONTACTEZ-MOI",
     contact_subtitle: "Vous avez un projet en tête ? Discutons-en !",
+    contact_availability: "Disponible immédiatement — CDI ou Freelance",
+    contact_location: "Basé en Tunisie — Ouvert au remote",
     contact_text:
       "Je suis toujours ouvert à de nouvelles opportunités et collaborations. N'hésitez pas à me contacter pour discuter de vos projets.",
     contact_cta: "M'envoyer un email",
@@ -88,15 +105,50 @@ const translations = {
     // Artisan d'Art
     artisandart_title: "Artisan d'Art",
     artisandart_subtitle:
-      "Application mobile et tableau de bord web favorisant la mise en avant des artisans, la promotion de leurs créations et l'interaction avec une communauté internationale.",
+      "Un écosystème numérique full-stack connectant les artisans traditionnels aux consommateurs modernes. Application iOS native, tableau de bord d'administration React et API backend Node.js robuste — conçu pour préserver et promouvoir l'excellence artisanale.",
     artisandart_description:
-      "Artisan d'Art connecte les artisans et les passionnés autour d'un espace numérique où ils peuvent partager leurs œuvres, publier des articles et interagir avec un public global.",
+      "Artisan d'Art est une marketplace numérique full-stack qui relie l'artisanat traditionnel à la technologie moderne. La plateforme permet aux artisans de présenter leur travail, gérer leur activité et se connecter avec des clients du monde entier via une application iOS native, un tableau de bord admin React et une API REST robuste avec plus de 60 endpoints.",
     artisandart_features: [
-      "Suivi et abonnement aux artisans",
-      "Publication d'articles et d'événements",
-      "Interface mobile et web intégrée",
-      "Notifications et interactions communautaires",
+      "Marketplace complète pour produits artisanaux avec promotions",
+      "Découverte d'artisans par géolocalisation avec cartes interactives",
+      "Système multi-rôles : Utilisateurs, Artisans, Admins",
+      "Support bilingue complet (Français & Anglais)",
+      "Notifications push en temps réel via Firebase",
+      "Système d'avis, notation et engagement social",
+      "Gestion d'événements avec intégration calendrier",
+      "Tableau de bord admin avec analytics et modération",
     ],
+    artisandart_architecture_title: "Architecture",
+    artisandart_architecture_subtitle:
+      "Une architecture moderne à trois niveaux conçue pour la scalabilité et la performance.",
+    artisandart_ios_title: "Application iOS",
+    artisandart_ios_subtitle:
+      "Application SwiftUI native offrant une expérience premium pour découvrir les artisans et leur savoir-faire.",
+    artisandart_dashboard_title: "Tableau de Bord Admin",
+    artisandart_dashboard_subtitle:
+      "Panneau d'administration React avec contrôle complet sur la plateforme, analytics et modération de contenu.",
+    artisandart_docs_title: "Documentation Complète",
+    artisandart_docs_subtitle:
+      "Consultez le portfolio détaillé de la plateforme avec l'architecture système, les endpoints API et toutes les fonctionnalités.",
+    artisandart_btn_portfolio_fr: "Portfolio Complet (Français)",
+    artisandart_btn_portfolio_en: "Full Portfolio (English)",
+    artisandart_stat_platforms: "Plateformes",
+    artisandart_stat_models: "Modèles",
+    artisandart_stat_screens: "Écrans",
+    artisandart_stat_languages: "Langues",
+    artisandart_label_login: "Connexion",
+    artisandart_label_home: "Accueil",
+    artisandart_label_events: "Événements",
+    artisandart_label_article: "Détail Article",
+    artisandart_label_shop: "Espace Artisan",
+    artisandart_label_profile: "Profil",
+    artisandart_label_settings: "Paramètres",
+    artisandart_label_admin_login: "Connexion Admin",
+    artisandart_label_dashboard: "Tableau de Bord",
+    artisandart_label_artisans: "Gestion Artisans",
+    artisandart_label_articles: "Gestion Articles",
+    artisandart_label_users: "Gestion Utilisateurs",
+    artisandart_view_github: "Voir sur GitHub",
 
     // Randev
     randev_title: "Randev",
@@ -148,8 +200,9 @@ const translations = {
     hero_greeting: "HELLO, MY NAME IS",
     hero_name: "Mohamed Melek Chtourou",
     hero_title: "Software Engineer",
+    hero_tagline: "Flutter & Node.js Specialist | 3 apps published on stores",
     hero_description:
-      "FullStack Engineer passionate about creating innovative digital experiences. Discover my projects and feel free to contact me to collaborate.",
+      "Flutter & Node.js specialist, I build high-performance mobile and web applications. Explore my projects and feel free to get in touch.",
     hero_cta: "View my projects",
     hero_contact: "Contact me",
     hero_download_cv: "Download CV",
@@ -162,7 +215,7 @@ const translations = {
     about_title: "ABOUT",
     about_subtitle: "Discover my background and skills",
     about_text:
-      "Passionate about web and mobile development, I transform ideas into elegant and high-performance digital solutions. With expertise in full-stack development, I create applications that combine modern design and optimal functionality.",
+      "Flutter & Node.js specialist with strong fullstack web experience. I designed and published 3 applications on the App Store and Google Play, including The Landlord — a real estate management platform in production. I'm looking to join an ambitious team where I can contribute to impactful mobile and web products.",
 
     // Skills Section
     skills_title: "SKILLS",
@@ -172,9 +225,24 @@ const translations = {
     projects_title: "MY PROJECTS",
     projects_subtitle: "Discover a selection of my recent achievements",
 
+    // Project card descriptions
+    card_thelandlord: "Real estate management platform",
+    card_lostfound: "Multi-platform lost items app",
+    card_tesa: "Centralized esports ecosystem",
+    card_randev: "B2B appointment management",
+    card_artisandart: "Artisan community mobile + web",
+    card_esprit: "Native iOS campus app",
+
+    // Project badges
+    badge_production: "In production",
+    badge_personal: "Personal project",
+    badge_academic: "Academic project",
+
     // Contact Section
     contact_title: "CONTACT ME",
     contact_subtitle: "Have a project in mind? Let's discuss!",
+    contact_availability: "Available immediately — Full-time or Freelance",
+    contact_location: "Based in Tunisia — Open to remote",
     contact_text:
       "I am always open to new opportunities and collaborations. Feel free to contact me to discuss your projects.",
     contact_cta: "Send me an email",
@@ -221,15 +289,50 @@ const translations = {
     // Artisan d'Art
     artisandart_title: "Artisan d'Art",
     artisandart_subtitle:
-      "Mobile application and web dashboard promoting craftsmen, showcasing their creations and interaction with an international community.",
+      "A full-stack digital ecosystem connecting traditional artisans to modern consumers. Native iOS app, React admin dashboard and robust Node.js backend API — designed to preserve and promote artisanal excellence.",
     artisandart_description:
-      "Artisan d'Art connects artisans and enthusiasts around a digital space where they can share their works, publish articles and interact with a global audience.",
+      "Artisan d'Art is a full-stack digital marketplace bridging traditional craftsmanship with modern technology. The platform enables artisans to showcase their work, manage their business and connect with clients worldwide through a native iOS app, a React admin dashboard and a robust REST API with 60+ endpoints.",
     artisandart_features: [
-      "Follow and subscribe to artisans",
-      "Publish articles and events",
-      "Integrated mobile and web interface",
-      "Notifications and community interactions",
+      "Complete marketplace for handcrafted products with promotions",
+      "Geolocation-based artisan discovery with interactive maps",
+      "Multi-role system: Users, Artisans, Admins",
+      "Full bilingual support (French & English)",
+      "Real-time push notifications via Firebase",
+      "Review, rating and social engagement system",
+      "Event management with calendar integration",
+      "Admin dashboard with analytics and moderation",
     ],
+    artisandart_architecture_title: "Architecture",
+    artisandart_architecture_subtitle:
+      "A modern three-tier architecture designed for scalability and performance.",
+    artisandart_ios_title: "iOS Application",
+    artisandart_ios_subtitle:
+      "Native SwiftUI application delivering a premium experience for discovering artisans and their craftsmanship.",
+    artisandart_dashboard_title: "Admin Dashboard",
+    artisandart_dashboard_subtitle:
+      "React-based admin panel with full platform control, analytics and content moderation.",
+    artisandart_docs_title: "Full Documentation",
+    artisandart_docs_subtitle:
+      "Browse the detailed platform portfolio with system architecture, API endpoints and all features.",
+    artisandart_btn_portfolio_fr: "Full Portfolio (French)",
+    artisandart_btn_portfolio_en: "Full Portfolio (English)",
+    artisandart_stat_platforms: "Platforms",
+    artisandart_stat_models: "Models",
+    artisandart_stat_screens: "Screens",
+    artisandart_stat_languages: "Languages",
+    artisandart_label_login: "Login",
+    artisandart_label_home: "Home",
+    artisandart_label_events: "Events",
+    artisandart_label_article: "Article Detail",
+    artisandart_label_shop: "Artisan Shop",
+    artisandart_label_profile: "Profile",
+    artisandart_label_settings: "Settings",
+    artisandart_label_admin_login: "Admin Login",
+    artisandart_label_dashboard: "Dashboard",
+    artisandart_label_artisans: "Artisan Management",
+    artisandart_label_articles: "Article Management",
+    artisandart_label_users: "User Management",
+    artisandart_view_github: "View on GitHub",
 
     // Randev
     randev_title: "Randev",

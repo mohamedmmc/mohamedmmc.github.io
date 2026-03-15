@@ -21,8 +21,8 @@
     <!-- Primary Meta Tags -->
     <title>Artisan d'Art - Application Mobile et Web | Mohamed Melek Chtourou</title>
     <meta name="title" content="Artisan d'Art - Application Mobile et Web | Mohamed Melek Chtourou" />
-    <meta name="description" content="Artisan d'Art est une plateforme qui connecte les artisans et passionnés. Partagez œuvres, articles et événements avec une communauté internationale." />
-    <meta name="keywords" content="Artisan d'Art, Application Mobile, Flutter, Node.js, MySQL, Communauté Artisans, Portfolio Mohamed Melek Chtourou" />
+    <meta name="description" content="Artisan d'Art est une plateforme full-stack qui connecte les artisans traditionnels aux consommateurs modernes. Application iOS native, tableau de bord admin React et API Node.js avec 60+ endpoints." />
+    <meta name="keywords" content="Artisan d'Art, Application iOS, SwiftUI, React, Node.js, MySQL, Marketplace Artisans, Portfolio Mohamed Melek Chtourou" />
     <meta name="author" content="Mohamed Melek Chtourou" />
     <meta name="robots" content="index, follow" />
 
@@ -30,7 +30,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://mohamedmmc.github.io/pages/projects/artisanDart.html" />
     <meta property="og:title" content="Artisan d'Art - Application Mobile et Web" />
-    <meta property="og:description" content="Plateforme mobile et web pour promouvoir les artisans et leurs créations auprès d'une communauté internationale." />
+    <meta property="og:description" content="Plateforme full-stack connectant artisans traditionnels et consommateurs modernes. iOS natif + Dashboard admin + API REST." />
     <meta property="og:image" content="https://mohamedmmc.github.io/assets/img/portfolio/artisanDart/logoName2.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:site_name" content="Mohamed Melek Chtourou Portfolio" />
@@ -39,15 +39,11 @@
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://mohamedmmc.github.io/pages/projects/artisanDart.html" />
     <meta property="twitter:title" content="Artisan d'Art - Application Mobile et Web" />
-    <meta property="twitter:description" content="Plateforme pour promouvoir les artisans et leurs créations." />
+    <meta property="twitter:description" content="Plateforme full-stack pour promouvoir les artisans et leurs créations." />
     <meta property="twitter:image" content="https://mohamedmmc.github.io/assets/img/portfolio/artisanDart/logoName2.png" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://mohamedmmc.github.io/pages/projects/artisanDart.html" />
-
-    <!-- Favicons -->
-    <!-- <link href="../../assets/img/favicon.png" rel="icon" /> -->
-    <!-- <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon" /> -->
 
     <!-- Google Fonts -->
     <link
@@ -61,6 +57,25 @@
 
     <!-- Libraries CSS Files -->
     <link href="../../assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Artisan d'Art",
+        "description": "Plateforme full-stack connectant les artisans traditionnels aux consommateurs modernes. Application iOS native, tableau de bord admin React et API backend Node.js.",
+        "image": "https://mohamedmmc.github.io/assets/img/portfolio/artisanDart/logoName2.png",
+        "applicationCategory": "SocialNetworkingApplication",
+        "operatingSystem": "iOS",
+        "author": {
+          "@type": "Person",
+          "name": "Mohamed Melek Chtourou",
+          "url": "https://mohamedmmc.github.io/"
+        },
+        "datePublished": "2023"
+      }
+    </script>
   </head>
 
   <body>
@@ -68,174 +83,289 @@
 
     <!-- Project wrapper -->
     <div class="project-wrapper">
-      <div class="project-hero">
+      <div class="project-hero artisan-hero">
         <div class="project-hero-content">
           <div class="project-logo-container">
-            <img src="../../assets/img/portfolio/artisanDart/logoName2.png" alt="Logo Artisan d'Art" />
+            <img src="../../assets/img/portfolio/artisanDart/logoName2.png" alt="Logo Artisan d'Art" loading="lazy" />
           </div>
           <h1 data-i18n="artisandart_title">Artisan d'Art</h1>
           <p data-i18n="artisandart_subtitle">
-            Application mobile et tableau de bord web favorisant la mise en avant
-            des artisans, la promotion de leurs créations et l'interaction avec une
-            communauté internationale.
+            Un écosystème numérique full-stack connectant les artisans traditionnels aux consommateurs modernes.
+            Application iOS native, tableau de bord d'administration React et API backend Node.js robuste
+            — conçu pour préserver et promouvoir l'excellence artisanale.
           </p>
+
+          <div class="hero-actions">
+            <a href="https://github.com/mohamedmmc/artisan-dart" target="_blank" class="github-link">
+              <i class="fa fa-github"></i>
+              <span data-i18n="artisandart_view_github">Voir sur GitHub</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-number">3</span>
+              <span class="hero-stat-label" data-i18n="artisandart_stat_platforms">Plateformes</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">60+</span>
+              <span class="hero-stat-label">Endpoints</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">15+</span>
+              <span class="hero-stat-label" data-i18n="artisandart_stat_models">Modèles</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">30+</span>
+              <span class="hero-stat-label" data-i18n="artisandart_stat_screens">Écrans</span>
+            </div>
+          </div>
+
+          <div class="hero-tech-strip">
+            <span class="tech-badge">Swift / SwiftUI</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">Firebase</span>
+          </div>
         </div>
       </div>
 
+      <!-- Details section -->
       <section class="project-section">
         <div class="container">
           <div class="row project-row">
-            <!-- Left (carousel) -->
-            <div class="col-lg-6 col-md-6">
-              <div class="carousel-container">
-                <div
-                  id="carousel"
-                  class="carousel slide"
-                  data-ride="carousel"
-                  aria-label="Galerie captures Artisan d'Art"
-                >
-                  <ol class="carousel-indicators">
-                    <li
-                      data-target="#carousel"
-                      data-slide-to="0"
-                      class="active"
-                    ></li>
-                    <li data-target="#carousel" data-slide-to="1"></li>
-                    <li data-target="#carousel" data-slide-to="2"></li>
-                    <li data-target="#carousel" data-slide-to="3"></li>
-                    <li data-target="#carousel" data-slide-to="4"></li>
-                    <li data-target="#carousel" data-slide-to="5"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                    <div class="item active">
-                      <img
-                        src="../../assets/img/portfolio/artisanDart/home.PNG"
-                        alt="Artisan d'Art - page d'accueil"
-                      />
-                    </div>
-                    <div class="item">
-                      <img
-                        src="../../assets/img/portfolio/artisanDart/eventList.PNG"
-                        alt="Artisan d'Art - liste des événements"
-                      />
-                    </div>
-                    <div class="item">
-                      <img
-                        src="../../assets/img/portfolio/artisanDart/filteredSearch.PNG"
-                        alt="Artisan d'Art - recherche filtrée"
-                      />
-                    </div>
-                    <div class="item">
-                      <img
-                        src="../../assets/img/portfolio/artisanDart/UpdateArticle1.PNG"
-                        alt="Artisan d'Art - mise à jour d'article"
-                      />
-                    </div>
-                    <div class="item">
-                      <img
-                        src="../../assets/img/portfolio/artisanDart/IMG_2876.PNG"
-                        alt="Artisan d'Art - profil artisan"
-                      />
-                    </div>
-                    <div class="item">
-                      <img
-                        src="../../assets/img/portfolio/artisanDart/upgradeAccount.png"
-                        alt="Artisan d'Art - amélioration compte"
-                      />
-                    </div>
-                  </div>
-                  <a
-                    class="left carousel-control"
-                    href="#carousel"
-                    role="button"
-                    data-slide="prev"
-                  >
-                    <span
-                      class="glyphicon glyphicon-chevron-left"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="sr-only">Précédent</span>
-                  </a>
-                  <a
-                    class="right carousel-control"
-                    href="#carousel"
-                    role="button"
-                    data-slide="next"
-                  >
-                    <span
-                      class="glyphicon glyphicon-chevron-right"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="sr-only">Suivant</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right (details) -->
             <div class="col-lg-6 col-md-6">
               <div class="feature-card">
                 <h3 data-i18n="project_summary">Résumé</h3>
                 <p data-i18n="artisandart_description">
-                  Artisan d'Art connecte les artisans et les passionnés autour
-                  d'un espace numérique où ils peuvent partager leurs œuvres,
-                  publier des articles et interagir avec un public global.
+                  Artisan d'Art est une marketplace numérique full-stack qui relie l'artisanat
+                  traditionnel à la technologie moderne. La plateforme permet aux artisans de
+                  présenter leur travail, gérer leur activité et se connecter avec des clients
+                  du monde entier via une application iOS native, un tableau de bord admin React
+                  et une API REST robuste avec plus de 60 endpoints.
                 </p>
-              </div>
-
-              <div class="feature-card">
-                <h4 data-i18n="project_technologies">Technologies</h4>
-                <div>
-                  <span class="tech-badge">Swift / SwiftUI</span>
-                  <span class="tech-badge">React</span>
-                  <span class="tech-badge">Node.js</span>
-                  <span class="tech-badge">MySQL</span>
-                </div>
               </div>
 
               <div class="feature-card">
                 <h4 data-i18n="project_features">Fonctionnalités clés</h4>
                 <ul data-i18n-list="artisandart_features">
-                  <li>Suivi et abonnement aux artisans</li>
-                  <li>Publication d'articles et d'événements</li>
-                  <li>Interface mobile et web intégrée</li>
-                  <li>Notifications et interactions communautaires</li>
+                  <li>Marketplace complète pour produits artisanaux avec promotions</li>
+                  <li>Découverte d'artisans par géolocalisation avec cartes interactives</li>
+                  <li>Système multi-rôles : Utilisateurs, Artisans, Admins</li>
+                  <li>Support bilingue complet (Français & Anglais)</li>
+                  <li>Notifications push en temps réel via Firebase</li>
+                  <li>Système d'avis, notation et engagement social</li>
+                  <li>Gestion d'événements avec intégration calendrier</li>
+                  <li>Tableau de bord admin avec analytics et modération</li>
                 </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="feature-card">
+                <h4 data-i18n="project_technologies">Technologies</h4>
+                <div>
+                  <span class="tech-badge">Swift / SwiftUI</span>
+                  <span class="tech-badge">MVVM</span>
+                  <span class="tech-badge">React</span>
+                  <span class="tech-badge">CoreUI</span>
+                  <span class="tech-badge">Redux</span>
+                  <span class="tech-badge">Node.js</span>
+                  <span class="tech-badge">Express.js</span>
+                  <span class="tech-badge">MySQL</span>
+                  <span class="tech-badge">Sequelize ORM</span>
+                  <span class="tech-badge">JWT Auth</span>
+                  <span class="tech-badge">Firebase FCM</span>
+                  <span class="tech-badge">MapKit</span>
+                  <span class="tech-badge">Leaflet</span>
+                  <span class="tech-badge">Twilio SMS</span>
+                  <span class="tech-badge">Nodemailer</span>
+                </div>
               </div>
 
               <div class="feature-card">
                 <h4 data-i18n="project_year">Année</h4>
-                <p>2023</p>
+                <p>2023 - 2024</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Architecture Section -->
+      <section class="architecture-section">
+        <div class="container">
+          <h2 class="showcase-title" data-i18n="artisandart_architecture_title">Architecture</h2>
+          <p class="showcase-subtitle" data-i18n="artisandart_architecture_subtitle">
+            Une architecture moderne à trois niveaux conçue pour la scalabilité et la performance.
+          </p>
+          <div class="arch-diagram">
+            <div class="arch-node">
+              <div class="arch-node-icon">📱</div>
+              <div class="arch-node-title">iOS App</div>
+              <div class="arch-node-sub">SwiftUI + MVVM</div>
+            </div>
+            <div class="arch-arrow">⟷</div>
+            <div class="arch-node">
+              <div class="arch-node-icon">⚡</div>
+              <div class="arch-node-title">REST API</div>
+              <div class="arch-node-sub">Node.js + Express</div>
+            </div>
+            <div class="arch-arrow">⟷</div>
+            <div class="arch-node">
+              <div class="arch-node-icon">🗄️</div>
+              <div class="arch-node-title">MySQL</div>
+              <div class="arch-node-sub">Sequelize ORM</div>
+            </div>
+          </div>
+          <div class="arch-diagram" style="margin-top: 20px;">
+            <div class="arch-node">
+              <div class="arch-node-icon">🖥️</div>
+              <div class="arch-node-title">Admin Dashboard</div>
+              <div class="arch-node-sub">React + CoreUI</div>
+            </div>
+            <div class="arch-arrow">⟷</div>
+            <div class="arch-node">
+              <div class="arch-node-icon">⚡</div>
+              <div class="arch-node-title">REST API</div>
+              <div class="arch-node-sub">60+ Endpoints</div>
+            </div>
+            <div class="arch-arrow">⟷</div>
+            <div class="arch-node">
+              <div class="arch-node-icon">📁</div>
+              <div class="arch-node-title">File Storage</div>
+              <div class="arch-node-sub">/uploads</div>
             </div>
           </div>
 
         </div>
       </section>
 
-      <!-- Gallery Section -->
-      <section class="gallery-section">
+      <!-- iOS Showcase -->
+      <section class="showcase-section">
         <div class="container">
-          <h2 class="gallery-title" data-i18n="project_gallery">Galerie</h2>
-          <div class="gallery-grid">
-            <div class="gallery-item" data-image="../../assets/img/portfolio/artisanDart/home.PNG">
-              <img src="../../assets/img/portfolio/artisanDart/home.PNG" alt="Artisan d'Art - Accueil" />
+          <h2 class="showcase-title" data-i18n="artisandart_ios_title">Application iOS</h2>
+          <p class="showcase-subtitle" data-i18n="artisandart_ios_subtitle">
+            Application SwiftUI native offrant une expérience premium pour découvrir les artisans et leur savoir-faire.
+          </p>
+          <div class="iphone-showcase">
+            <div>
+              <div class="device-mockup iphone-mockup gallery-item" data-image="../../assets/img/portfolio/artisanDart/ios-login.PNG" data-device="iphone">
+                <img class="device-screen" src="../../assets/img/portfolio/artisanDart/ios-login.PNG" alt="Artisan d'Art - Connexion" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/iphone-mockup.png" alt="" />
+              </div>
+              <div class="device-label" data-i18n="artisandart_label_login">Connexion</div>
             </div>
-            <div class="gallery-item" data-image="../../assets/img/portfolio/artisanDart/eventList.PNG">
-              <img src="../../assets/img/portfolio/artisanDart/eventList.PNG" alt="Artisan d'Art - Liste événements" />
+            <div>
+              <div class="device-mockup iphone-mockup gallery-item" data-image="../../assets/img/portfolio/artisanDart/ios-home.PNG" data-device="iphone">
+                <img class="device-screen" src="../../assets/img/portfolio/artisanDart/ios-home.PNG" alt="Artisan d'Art - Accueil" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/iphone-mockup.png" alt="" />
+              </div>
+              <div class="device-label" data-i18n="artisandart_label_home">Accueil</div>
             </div>
-            <div class="gallery-item" data-image="../../assets/img/portfolio/artisanDart/filteredSearch.PNG">
-              <img src="../../assets/img/portfolio/artisanDart/filteredSearch.PNG" alt="Artisan d'Art - Recherche filtrée" />
+            <div>
+              <div class="device-mockup iphone-mockup gallery-item" data-image="../../assets/img/portfolio/artisanDart/ios-events.PNG" data-device="iphone">
+                <img class="device-screen" src="../../assets/img/portfolio/artisanDart/ios-events.PNG" alt="Artisan d'Art - Événements" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/iphone-mockup.png" alt="" />
+              </div>
+              <div class="device-label" data-i18n="artisandart_label_events">Événements</div>
             </div>
-            <div class="gallery-item" data-image="../../assets/img/portfolio/artisanDart/UpdateArticle1.PNG">
-              <img src="../../assets/img/portfolio/artisanDart/UpdateArticle1.PNG" alt="Artisan d'Art - Modification article" />
+            <div>
+              <div class="device-mockup iphone-mockup gallery-item" data-image="../../assets/img/portfolio/artisanDart/ios-article-detail.PNG" data-device="iphone">
+                <img class="device-screen" src="../../assets/img/portfolio/artisanDart/ios-article-detail.PNG" alt="Artisan d'Art - Détail article" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/iphone-mockup.png" alt="" />
+              </div>
+              <div class="device-label" data-i18n="artisandart_label_article">Détail Article</div>
             </div>
-            <div class="gallery-item" data-image="../../assets/img/portfolio/artisanDart/IMG_2876.PNG">
-              <img src="../../assets/img/portfolio/artisanDart/IMG_2876.PNG" alt="Artisan d'Art - Mobile" />
+            <div>
+              <div class="device-mockup iphone-mockup gallery-item" data-image="../../assets/img/portfolio/artisanDart/ios-shop.PNG" data-device="iphone">
+                <img class="device-screen" src="../../assets/img/portfolio/artisanDart/ios-shop.PNG" alt="Artisan d'Art - Espace Artisan" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/iphone-mockup.png" alt="" />
+              </div>
+              <div class="device-label" data-i18n="artisandart_label_shop">Espace Artisan</div>
             </div>
-            <div class="gallery-item" data-image="../../assets/img/portfolio/artisanDart/upgradeAccount.png">
-              <img src="../../assets/img/portfolio/artisanDart/upgradeAccount.png" alt="Artisan d'Art - Upgrade compte" />
+            <div>
+              <div class="device-mockup iphone-mockup gallery-item" data-image="../../assets/img/portfolio/artisanDart/ios-profile.PNG" data-device="iphone">
+                <img class="device-screen" src="../../assets/img/portfolio/artisanDart/ios-profile.PNG" alt="Artisan d'Art - Profil" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/iphone-mockup.png" alt="" />
+              </div>
+              <div class="device-label" data-i18n="artisandart_label_profile">Profil</div>
             </div>
+            <div>
+              <div class="device-mockup iphone-mockup gallery-item" data-image="../../assets/img/portfolio/artisanDart/ios-settings.PNG" data-device="iphone">
+                <img class="device-screen" src="../../assets/img/portfolio/artisanDart/ios-settings.PNG" alt="Artisan d'Art - Paramètres" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/iphone-mockup.png" alt="" />
+              </div>
+              <div class="device-label" data-i18n="artisandart_label_settings">Paramètres</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dashboard Showcase -->
+      <section class="showcase-section" style="background: linear-gradient(135deg, #111 0%, #1a1410 100%);">
+        <div class="container">
+          <h2 class="showcase-title" data-i18n="artisandart_dashboard_title">Tableau de Bord Admin</h2>
+          <p class="showcase-subtitle" data-i18n="artisandart_dashboard_subtitle">
+            Panneau d'administration React avec contrôle complet sur la plateforme, analytics et modération de contenu.
+          </p>
+          <div class="macbook-showcase">
+            <div>
+              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/artisanDart/dashboard-login.png" data-device="macbook">
+                <img class="device-screen" src="../../assets/img/portfolio/artisanDart/dashboard-login.png" alt="Dashboard - Connexion Admin" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/macbook-mockup.png" alt="" />
+              </div>
+              <div class="device-label" data-i18n="artisandart_label_admin_login">Connexion Admin</div>
+            </div>
+            <div>
+              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/artisanDart/dashboard-overview.png" data-device="macbook">
+                <img class="device-screen" src="../../assets/img/portfolio/artisanDart/dashboard-overview.png" alt="Dashboard - Vue d'ensemble" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/macbook-mockup.png" alt="" />
+              </div>
+              <div class="device-label" data-i18n="artisandart_label_dashboard">Tableau de Bord</div>
+            </div>
+            <div>
+              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/artisanDart/dashboard-artisans.png" data-device="macbook">
+                <img class="device-screen" src="../../assets/img/portfolio/artisanDart/dashboard-artisans.png" alt="Dashboard - Gestion Artisans" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/macbook-mockup.png" alt="" />
+              </div>
+              <div class="device-label" data-i18n="artisandart_label_artisans">Gestion Artisans</div>
+            </div>
+            <div>
+              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/artisanDart/dashboard-articles.png" data-device="macbook">
+                <img class="device-screen" src="../../assets/img/portfolio/artisanDart/dashboard-articles.png" alt="Dashboard - Gestion Articles" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/macbook-mockup.png" alt="" />
+              </div>
+              <div class="device-label" data-i18n="artisandart_label_articles">Gestion Articles</div>
+            </div>
+            <div>
+              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/artisanDart/dashboard-users.png" data-device="macbook">
+                <img class="device-screen" src="../../assets/img/portfolio/artisanDart/dashboard-users.png" alt="Dashboard - Gestion Utilisateurs" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/macbook-mockup.png" alt="" />
+              </div>
+              <div class="device-label" data-i18n="artisandart_label_users">Gestion Utilisateurs</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Documents & CTA -->
+      <section class="showcase-section">
+        <div class="container">
+          <h2 class="showcase-title" data-i18n="artisandart_docs_title">Documentation Complète</h2>
+          <p class="showcase-subtitle" data-i18n="artisandart_docs_subtitle">
+            Consultez le portfolio détaillé de la plateforme avec l'architecture système, les endpoints API et toutes les fonctionnalités.
+          </p>
+          <div class="portfolio-docs">
+            <a href="../../assets/img/portfolio/artisanDart/Artisan_Dart_Portfolio_v2_FR.html" target="_blank" class="portfolio-doc-btn btn-fr">
+              <span class="btn-icon">🇫🇷</span>
+              <span data-i18n="artisandart_btn_portfolio_fr">Portfolio Complet (Français)</span>
+            </a>
+            <a href="../../assets/img/portfolio/artisanDart/Artisan_Dart_Portfolio_v2_EN.html" target="_blank" class="portfolio-doc-btn btn-en">
+              <span class="btn-icon">🇬🇧</span>
+              <span data-i18n="artisandart_btn_portfolio_en">Full Portfolio (English)</span>
+            </a>
           </div>
         </div>
       </section>
@@ -246,38 +376,11 @@
       <div class="gallery-modal-content">
         <button class="gallery-modal-close">&times;</button>
         <span class="gallery-modal-nav gallery-modal-prev">&#10094;</span>
-        <img id="galleryModalImage" src="" alt="" />
-        <span class="gallery-modal-nav gallery-modal-next">&#10095;</span>
-      </div>
-    </div>
-
-    <!-- Image modal -->
-    <div
-      id="imageModal"
-      class="modal fade"
-      tabindex="-1"
-      role="dialog"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Fermer"
-            >
-              &times;
-            </button>
-            <img
-              id="modalImage"
-              src=""
-              alt=""
-              class="modal-image-display"
-            />
-          </div>
+        <div id="galleryModalDevice" class="gallery-modal-device">
+          <img id="galleryModalScreen" class="gallery-modal-screen" src="" alt="" />
+          <img id="galleryModalFrame" class="gallery-modal-frame" src="" alt="" />
         </div>
+        <span class="gallery-modal-nav gallery-modal-next">&#10095;</span>
       </div>
     </div>
 
@@ -297,38 +400,37 @@
     <!-- Translations -->
     <script src="../../assets/js/translations.js"></script>
 
-    <!-- Image Modal Script -->
-    <script>
-      $(document).ready(function() {
-        $('.screenshot').on('click', function() {
-          var imgSrc = $(this).attr('src');
-          var imgAlt = $(this).attr('alt');
-          $('#modalImage').attr('src', imgSrc);
-          $('#modalImage').attr('alt', imgAlt);
-        });
-      });
-    </script>
-
     <!-- Gallery Modal Script -->
     <script>
       (function() {
         const galleryItems = document.querySelectorAll('.gallery-item');
         const modal = document.getElementById('galleryModal');
-        const modalImg = document.getElementById('galleryModalImage');
+        const modalDevice = document.getElementById('galleryModalDevice');
+        const modalScreen = document.getElementById('galleryModalScreen');
+        const modalFrame = document.getElementById('galleryModalFrame');
         const closeBtn = document.querySelector('.gallery-modal-close');
         const prevBtn = document.querySelector('.gallery-modal-prev');
         const nextBtn = document.querySelector('.gallery-modal-next');
 
+        const FRAMES = {
+          iphone: '../../assets/img/iphone-mockup.png',
+          macbook: '../../assets/img/macbook-mockup.png'
+        };
+
         let currentIndex = 0;
         const images = Array.from(galleryItems).map(item => ({
           src: item.getAttribute('data-image'),
-          alt: item.querySelector('img').alt
+          alt: item.querySelector('.device-screen').alt,
+          device: item.getAttribute('data-device')
         }));
 
         function showImage(index) {
           currentIndex = index;
-          modalImg.src = images[index].src;
-          modalImg.alt = images[index].alt;
+          var img = images[index];
+          modalScreen.src = img.src;
+          modalScreen.alt = img.alt;
+          modalFrame.src = FRAMES[img.device];
+          modalDevice.className = 'gallery-modal-device device-' + img.device;
           modal.classList.add('active');
           document.body.style.overflow = 'hidden';
         }
@@ -339,15 +441,11 @@
         }
 
         function showNext() {
-          currentIndex = (currentIndex + 1) % images.length;
-          modalImg.src = images[currentIndex].src;
-          modalImg.alt = images[currentIndex].alt;
+          showImage((currentIndex + 1) % images.length);
         }
 
         function showPrev() {
-          currentIndex = (currentIndex - 1 + images.length) % images.length;
-          modalImg.src = images[currentIndex].src;
-          modalImg.alt = images[currentIndex].alt;
+          showImage((currentIndex - 1 + images.length) % images.length);
         }
 
         galleryItems.forEach((item, index) => {

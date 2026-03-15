@@ -19,14 +19,14 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <!-- Primary Meta Tags -->
-    <title>Mohamed Melek Chtourou - Ingénieur FullStack | Portfolio</title>
+    <title>Mohamed Melek Chtourou - Ingénieur Flutter & Node.js | Portfolio</title>
     <meta
       name="title"
-      content="Mohamed Melek Chtourou - Ingénieur FullStack | Portfolio"
+      content="Mohamed Melek Chtourou - Ingénieur Flutter & Node.js | Portfolio"
     />
     <meta
       name="description"
-      content="Ingénieur FullStack passionné par la création d'expériences numériques innovantes. Spécialisé en développement web et mobile avec Flutter, React, Node.js et plus."
+      content="Ingénieur spécialisé Flutter & Node.js avec 3 apps publiées sur les stores. Expérience fullstack web. Découvrez mes projets et contactez-moi."
     />
     <meta
       name="keywords"
@@ -42,11 +42,11 @@
     <meta property="og:url" content="https://mohamedmmc.github.io/" />
     <meta
       property="og:title"
-      content="Mohamed Melek Chtourou - Ingénieur FullStack | Portfolio"
+      content="Mohamed Melek Chtourou - Ingénieur Flutter & Node.js | Portfolio"
     />
     <meta
       property="og:description"
-      content="Ingénieur FullStack passionné par la création d'expériences numériques innovantes. Spécialisé en développement web et mobile."
+      content="Ingénieur spécialisé Flutter & Node.js avec 3 apps publiées sur les stores. Découvrez mes projets."
     />
     <meta
       property="og:image"
@@ -64,11 +64,11 @@
     <meta property="twitter:url" content="https://mohamedmmc.github.io/" />
     <meta
       property="twitter:title"
-      content="Mohamed Melek Chtourou - Ingénieur FullStack | Portfolio"
+      content="Mohamed Melek Chtourou - Ingénieur Flutter & Node.js | Portfolio"
     />
     <meta
       property="twitter:description"
-      content="Ingénieur FullStack passionné par la création d'expériences numériques innovantes. Spécialisé en développement web et mobile."
+      content="Ingénieur spécialisé Flutter & Node.js avec 3 apps publiées sur les stores. Découvrez mes projets."
     />
     <meta
       property="twitter:image"
@@ -78,6 +78,11 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://mohamedmmc.github.io/" />
 
+    <!-- Hreflang for multilingual support -->
+    <link rel="alternate" hreflang="fr" href="https://mohamedmmc.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://mohamedmmc.github.io/" />
+    <link rel="alternate" hreflang="x-default" href="https://mohamedmmc.github.io/" />
+
     <!-- Theme Color -->
     <meta name="theme-color" content="#0a0a0a" />
     <meta name="msapplication-TileColor" content="#0a0a0a" />
@@ -85,6 +90,11 @@
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon" type="image/png" />
     <link href="assets/img/favicon.png" rel="apple-touch-icon" />
+
+    <!-- Preconnect hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
 
     <!-- Google Fonts -->
     <link
@@ -111,8 +121,8 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Mohamed Melek Chtourou",
-        "jobTitle": "Ingénieur FullStack",
-        "description": "Ingénieur FullStack passionné par la création d'expériences numériques innovantes",
+        "jobTitle": "Ingénieur Flutter & Node.js",
+        "description": "Ingénieur spécialisé Flutter & Node.js avec expérience fullstack web. 3 applications publiées sur les stores.",
         "url": "https://mohamedmmc.github.io/",
         "image": "https://mohamedmmc.github.io/assets/img/mmc2.jpg",
         "email": "contact@melekchtourou.com",
@@ -169,25 +179,22 @@
                 MOHAMED MELEK<br />
                 CHTOUROU
               </h1>
+              <p class="hero-tagline" data-i18n="hero_tagline">
+                Spécialiste Flutter & Node.js | 3 apps publiées sur les stores
+              </p>
               <div id="typing-container" class="language-transition">
                 <div id="text" class="language-transition"></div>
                 <div id="cursor"></div>
               </div>
               <p class="hero-description" data-i18n="hero_description">
-                Ingénieur FullStack passionné par la création d'expériences
-                numériques innovantes. Découvrez mes projets et n'hésitez pas à
-                me contacter pour collaborer.
+                Ingénieur spécialisé Flutter & Node.js, je conçois des applications mobiles et web performantes. Découvrez mes projets et n'hésitez pas à me contacter.
               </p>
               <div class="hero-buttons">
-                <button
-                  type="submit"
-                  class="cybr-btn"
-                  onclick="window.open('contactform/cv_ATS_FR.pdf')"
+                <a
+                  href="contactform/cv_ATS_FR.pdf"
+                  download="Melek_Chtourou_CV"
+                  class="cybr-btn cybr-btn--primary"
                 >
-                  <a
-                    href="contactform/cv_ATS_FR.pdf"
-                    download="Melek Chtourou"
-                  ></a>
                   <span data-i18n="hero_download_cv">Télécharger le CV</span
                   ><span aria-hidden></span>
                   <span
@@ -196,8 +203,8 @@
                     data-i18n="hero_cv_glitch"
                     >CV</span
                   >
-                </button>
-                <a href="#works" class="cybr-btn">
+                </a>
+                <a href="#works" class="cybr-btn cybr-btn--secondary">
                   <span data-i18n="hero_view_projects">Voir mes projets</span
                   ><span aria-hidden></span>
                   <span
@@ -210,7 +217,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div class="col-lg-5 col-md-4 col-sm-12 col-xs-12">
             <div class="profile-image-container">
               <img
                 class="profile-image"
@@ -239,10 +246,7 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <p class="about-text" data-i18n="about_text">
-              Passionné par le développement web et mobile, je transforme des
-              idées en solutions digitales élégantes et performantes. Avec une
-              expertise en développement full-stack, je crée des applications
-              qui combinent design moderne et fonctionnalité optimale.
+              Ingénieur spécialisé Flutter & Node.js avec une solide expérience fullstack web. J'ai conçu et publié 3 applications sur l'App Store et Google Play, dont The Landlord — une plateforme de gestion immobilière en production. Je cherche à rejoindre une équipe ambitieuse où je pourrai contribuer à des produits mobiles et web impactants.
             </p>
           </div>
         </div>
@@ -250,23 +254,23 @@
           <div class="row">
             <div class="col-md-3 col-sm-6">
               <div class="skill-card">
-                <i class="fa fa-code skill-icon language-transition"></i>
-                <h4 class="language-transition">Frontend</h4>
-                <p class="language-transition">React, Angular, Vue.js</p>
+                <i class="fa fa-mobile skill-icon language-transition"></i>
+                <h4 class="language-transition">Mobile</h4>
+                <p class="language-transition">Flutter, Dart, Swift, Kotlin</p>
               </div>
             </div>
             <div class="col-md-3 col-sm-6">
               <div class="skill-card">
                 <i class="fa fa-server skill-icon language-transition"></i>
                 <h4 class="language-transition">Backend</h4>
-                <p class="language-transition">Node.js, .NET, Java</p>
+                <p class="language-transition">Node.js, Express, Spring Boot</p>
               </div>
             </div>
             <div class="col-md-3 col-sm-6">
               <div class="skill-card">
-                <i class="fa fa-mobile skill-icon language-transition"></i>
-                <h4 class="language-transition">Mobile</h4>
-                <p class="language-transition">React Native, Flutter</p>
+                <i class="fa fa-code skill-icon language-transition"></i>
+                <h4 class="language-transition">Frontend</h4>
+                <p class="language-transition">React, JavaScript, HTML/CSS</p>
               </div>
             </div>
             <div class="col-md-3 col-sm-6">
@@ -294,51 +298,114 @@
 
         <div class="projects-grid">
           <a href="pages/projects/thelandlord.html" class="project-card">
+            <span class="project-badge project-badge--production" data-i18n="badge_production">En production</span>
             <img
               src="assets/img/portfolio/thelandlord/logotll.png"
               alt="The Landlord"
               class="project-image"
+              loading="lazy"
             />
-          </a>
-
-          <a href="pages/projects/tesa.html" class="project-card">
-            <img
-              src="assets/img/portfolio/Tesa/TesaLogo.png"
-              alt="Tesa"
-              class="project-image"
-            />
-          </a>
-
-          <a href="pages/projects/artisanDart.html" class="project-card">
-            <img
-              src="assets/img/portfolio/artisanDart/logoName2.png"
-              alt="Artisan d'Art"
-              class="project-image"
-            />
-          </a>
-
-          <a href="pages/projects/randev.html" class="project-card">
-            <img
-              src="assets/img/portfolio/randev/randev.png"
-              alt="Randev"
-              class="project-image"
-            />
-          </a>
-
-          <a href="pages/projects/espritApp.html" class="project-card">
-            <img
-              src="assets/img/portfolio/esprit/esprit.png"
-              alt="Esprit App"
-              class="project-image"
-            />
+            <div class="project-card-info">
+              <h3 class="project-card-title">The Landlord</h3>
+              <p class="project-card-desc" data-i18n="card_thelandlord">Plateforme de gestion immobilière</p>
+              <div class="project-card-techs">
+                <span class="project-card-tech">Flutter</span>
+                <span class="project-card-tech">Node.js</span>
+              </div>
+            </div>
           </a>
 
           <a href="pages/projects/lost%26found.html" class="project-card">
+            <span class="project-badge project-badge--production" data-i18n="badge_production">En production</span>
             <img
               src="assets/img/portfolio/lost&found/lost&found3.png"
               alt="Lost and Found"
               class="project-image"
+              loading="lazy"
             />
+            <div class="project-card-info">
+              <h3 class="project-card-title">Lost & Found</h3>
+              <p class="project-card-desc" data-i18n="card_lostfound">App multi-plateforme objets perdus</p>
+              <div class="project-card-techs">
+                <span class="project-card-tech">Swift</span>
+                <span class="project-card-tech">Kotlin</span>
+                <span class="project-card-tech">Node.js</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="pages/projects/tesa.html" class="project-card">
+            <span class="project-badge project-badge--personal" data-i18n="badge_personal">Projet personnel</span>
+            <img
+              src="assets/img/portfolio/Tesa/TesaLogo.png"
+              alt="Tesa"
+              class="project-image"
+              loading="lazy"
+            />
+            <div class="project-card-info">
+              <h3 class="project-card-title">TESA</h3>
+              <p class="project-card-desc" data-i18n="card_tesa">Écosystème esport centralisé</p>
+              <div class="project-card-techs">
+                <span class="project-card-tech">Flutter</span>
+                <span class="project-card-tech">Node.js</span>
+                <span class="project-card-tech">MySQL</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="pages/projects/randev.html" class="project-card">
+            <span class="project-badge project-badge--academic" data-i18n="badge_academic">Projet académique</span>
+            <img
+              src="assets/img/portfolio/randev/randev.png"
+              alt="Randev"
+              class="project-image"
+              loading="lazy"
+            />
+            <div class="project-card-info">
+              <h3 class="project-card-title">Randev</h3>
+              <p class="project-card-desc" data-i18n="card_randev">Gestion de rendez-vous B2B</p>
+              <div class="project-card-techs">
+                <span class="project-card-tech">Flutter</span>
+                <span class="project-card-tech">Spring Boot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="pages/projects/artisanDart.html" class="project-card">
+            <span class="project-badge project-badge--academic" data-i18n="badge_academic">Projet académique</span>
+            <img
+              src="assets/img/portfolio/artisanDart/logoName2.png"
+              alt="Artisan d'Art"
+              class="project-image"
+              loading="lazy"
+            />
+            <div class="project-card-info">
+              <h3 class="project-card-title">Artisan d'Art</h3>
+              <p class="project-card-desc" data-i18n="card_artisandart">Communauté d'artisans mobile + web</p>
+              <div class="project-card-techs">
+                <span class="project-card-tech">Swift</span>
+                <span class="project-card-tech">React</span>
+                <span class="project-card-tech">Node.js</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="pages/projects/espritApp.html" class="project-card">
+            <span class="project-badge project-badge--academic" data-i18n="badge_academic">Projet académique</span>
+            <img
+              src="assets/img/portfolio/esprit/esprit.png"
+              alt="Esprit App"
+              class="project-image"
+              loading="lazy"
+            />
+            <div class="project-card-info">
+              <h3 class="project-card-title">Esprit App</h3>
+              <p class="project-card-desc" data-i18n="card_esprit">App campus iOS native</p>
+              <div class="project-card-techs">
+                <span class="project-card-tech">Swift 5</span>
+                <span class="project-card-tech">UIKit</span>
+              </div>
+            </div>
           </a>
         </div>
       </div>

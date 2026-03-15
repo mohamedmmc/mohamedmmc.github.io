@@ -14,6 +14,14 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <div class="contact-cta">
+              <div class="contact-availability">
+                <p class="contact-status" data-i18n="contact_availability">
+                  Disponible immédiatement — CDI ou Freelance
+                </p>
+                <p class="contact-location" data-i18n="contact_location">
+                  Basé en Tunisie — Ouvert au remote
+                </p>
+              </div>
               <p class="contact-text" data-i18n="contact_text">
                 Je suis toujours ouvert à de nouvelles opportunités et
                 collaborations. N'hésitez pas à me contacter pour discuter de vos
@@ -70,7 +78,7 @@
 
     <footer id="site-footer" role="contentinfo" style="background: #000; color: #eee; padding: 40px 0">
       <div class="container">
-        <div style="text-align: center; color: #bbb">
+        <div style="text-align: center; color: #ddd">
           <p class="language-transition">
             &copy; <span id="footer-year"></span> Mohamed Melek Chtourou. <span data-i18n="footer_rights">Tous
             droits réservés.</span>
@@ -78,6 +86,11 @@
         </div>
       </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
+      <i class="fa fa-chevron-up"></i>
+    </button>
   `;
 
   // Load footer when DOM is ready
@@ -95,6 +108,21 @@
       // Re-initialize translations if LanguageManager is available
       if (window.LanguageManager) {
         window.LanguageManager.updateLanguage(window.LanguageManager.currentLanguage, false);
+      }
+
+      // Back to Top button logic
+      const backToTop = document.getElementById('backToTop');
+      if (backToTop) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        });
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
       }
     }
   }
