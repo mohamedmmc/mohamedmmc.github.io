@@ -1,0 +1,36 @@
+name: 🚀 Deploy Portfolio to OVH
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to OVH via SFTP
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🚚 Deploy via SFTP to OVH
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.PORTFOLIO_SSH_HOST }}
+          username: ${{ secrets.PORTFOLIO_SSH_USER }}
+          password: ${{ secrets.PORTFOLIO_SSH_PASSWORD }}
+          port: 22
+          source: "."
+          target: "/www/portfolio"
+          strip_components: 0
+          rm: false
+
+      - name: ✅ Notify success
+        if: success()
+        run: echo "✅ Portfolio deployed successfully to OVH!"
+
+      - name: ❌ Notify failure
+        if: failure()
+        run: echo "❌ Deployment failed!"
+
