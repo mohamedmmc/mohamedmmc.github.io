@@ -22,7 +22,6 @@ jobs:
           password: ${{ secrets.PORTFOLIO_SSH_PASSWORD }}
           server-dir: /www/portfolio/
           local-dir: ./
-          dangerous-clean-slate: true
           exclude: |
             **/.git*
             **/.git*/**
@@ -36,4 +35,3 @@ jobs:
       - name: ❌ Notify failure
         if: failure()
         run: echo "❌ Deployment failed!"
-
