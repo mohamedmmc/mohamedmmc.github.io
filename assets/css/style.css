@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: Cyber;
-  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  src: url("../fonts/BlenderPro-Bold.otf") format("opentype");
   font-display: swap;
 }
 
@@ -277,7 +277,7 @@ hr {
   font-size: 7.5rem;
   font-weight: 800;
   margin-bottom: 30px;
-  background: linear-gradient(135deg, #fff 0%, rgba(139, 17, 8, 0.8) 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #e8e8e8 60%, rgba(139,17,8,0.8) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -525,12 +525,13 @@ hr {
   background: var(--shadow-primary);
   text-shadow: 2px 2px var(--shadow-primary), -2px -2px var(--shadow-secondary);
   clip-path: var(--clip);
-  animation: glitch 2s infinite;
+  animation: none;
   display: none;
 }
 
 .cybr-btn:hover .cybr-btn__glitch {
   display: block;
+  animation: glitch 0.5s ease;
 }
 
 .cybr-btn__glitch:before {
@@ -1358,6 +1359,21 @@ section {
 }
 
 @media (max-width: 991px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project-card--featured {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 24px;
+  }
+  .project-card--featured .project-card-info {
+    text-align: center;
+  }
+  .project-card--featured .project-card-techs {
+    justify-content: center;
+  }
+
   #block .row {
     display: flex;
     flex-direction: column-reverse;
@@ -1584,6 +1600,10 @@ section {
 }
 
 @media (max-width: 576px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
   /* Photo encore plus petite sur très petit écran */
   .profile-image-container {
     max-width: 250px;
@@ -3311,3 +3331,109 @@ a.site-link:hover {
     scroll-behavior: auto !important;
   }
 }
+
+/* CV Modal */
+#cv-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+#cv-modal.active { display: flex; }
+#cv-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(6px);
+}
+#cv-modal-box {
+  position: relative;
+  z-index: 1;
+  background: #0a0a0f;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 40px 36px;
+  max-width: 520px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(139,17,8,0.6), 0 0 80px rgba(139,17,8,0.3), 0 0 0 1px rgba(139,17,8,0.4);
+}
+#cv-modal-box h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+#cv-modal-box p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.3rem;
+  margin-bottom: 32px;
+}
+.cv-options {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cv-option {
+  flex: 1;
+  min-width: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 22px 16px;
+  color: #fff;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.cv-option:hover {
+  background: rgba(139,17,8,0.15);
+  border-color: rgba(139,17,8,0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(139,17,8,0.3);
+}
+.cv-option-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+.cv-option-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.cv-option-desc {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+  text-align: center;
+}
+.cv-option-badge {
+  font-size: 1.1rem;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.badge-human { background: rgba(0,198,255,0.15); color: #00C6FF; border: 1px solid rgba(0,198,255,0.3); }
+.badge-robot { background: rgba(139,17,8,0.2); color: #ff6b6b; border: 1px solid rgba(139,17,8,0.3); }
+#cv-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.4);
+  font-size: 1.6rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+#cv-modal-close:hover { color: #fff; }

@@ -164,7 +164,7 @@
 
   <body>
     <div id="navbar-placeholder"></div>
-    <canvas id="canvas" class="mmc"></canvas>
+    <canvas id="canvas" class="mmc" style="z-index: 0; position: absolute;"></canvas>
 
 
     <div id="block">
@@ -418,113 +418,6 @@
     <!-- Translations -->
     <script src="assets/js/translations.js"></script>
   
-<style>
-/* CV Modal */
-#cv-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  align-items: center;
-  justify-content: center;
-}
-#cv-modal.active { display: flex; }
-#cv-modal-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  backdrop-filter: blur(6px);
-}
-#cv-modal-box {
-  position: relative;
-  z-index: 1;
-  background: #0a0a0f;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  padding: 40px 36px;
-  max-width: 480px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 0 60px rgba(0,112,209,0.3), 0 0 120px rgba(0,198,255,0.1);
-}
-#cv-modal-box h2 {
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  letter-spacing: 1px;
-}
-#cv-modal-box p {
-  color: rgba(255,255,255,0.5);
-  font-size: 0.9rem;
-  margin-bottom: 32px;
-}
-.cv-options {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.cv-option {
-  flex: 1;
-  min-width: 170px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 10px;
-  padding: 22px 16px;
-  color: #fff;
-  transition: all 0.25s ease;
-  cursor: pointer;
-}
-.cv-option:hover {
-  background: rgba(0,112,209,0.15);
-  border-color: #0070D1;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,112,209,0.3);
-}
-.cv-option-icon {
-  font-size: 2.2rem;
-  line-height: 1;
-}
-.cv-option-title {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-.cv-option-desc {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.45);
-  line-height: 1.4;
-  text-align: center;
-}
-.cv-option-badge {
-  font-size: 0.65rem;
-  padding: 2px 10px;
-  border-radius: 20px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-.badge-human { background: rgba(0,198,255,0.15); color: #00C6FF; border: 1px solid rgba(0,198,255,0.3); }
-.badge-robot { background: rgba(139,17,8,0.2); color: #ff6b6b; border: 1px solid rgba(139,17,8,0.3); }
-#cv-modal-close {
-  position: absolute;
-  top: 14px;
-  right: 16px;
-  background: none;
-  border: none;
-  color: rgba(255,255,255,0.4);
-  font-size: 1.4rem;
-  cursor: pointer;
-  line-height: 1;
-  transition: color 0.2s;
-}
-#cv-modal-close:hover { color: #fff; }
-</style>
 
 <div id="cv-modal">
   <div id="cv-modal-backdrop" onclick="document.getElementById('cv-modal').classList.remove('active')"></div>
