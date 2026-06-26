@@ -50,7 +50,7 @@
     />
     <meta
       property="og:image"
-      content="https://mohamedmmc.github.io/assets/img/mmc2.jpg"
+      content="https://mohamedmmc.github.io/assets/img/og-cover.jpg"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -72,7 +72,7 @@
     />
     <meta
       property="twitter:image"
-      content="https://mohamedmmc.github.io/assets/img/mmc2.jpg"
+      content="https://mohamedmmc.github.io/assets/img/og-cover.jpg"
     />
 
     <!-- Canonical URL -->
@@ -88,8 +88,9 @@
     <meta name="msapplication-TileColor" content="#0a0a0a" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" type="image/png" />
-    <link href="assets/img/favicon.png" rel="apple-touch-icon" />
+    <link href="assets/img/icons/favicon-32.png" rel="icon" type="image/png" sizes="32x32" />
+    <link href="assets/img/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Preconnect hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -125,10 +126,10 @@
         "description": "Ingénieur spécialisé Flutter & Node.js avec expérience fullstack web. 3 applications publiées sur les stores.",
         "url": "https://mohamedmmc.github.io/",
         "image": "https://mohamedmmc.github.io/assets/img/mmc2.jpg",
-        "email": "contact@melekchtourou.com",
+        "email": "mohamedmelek.chtourou@gmail.com",
         "sameAs": [
           "https://github.com/mohamedmmc",
-          "https://www.linkedin.com/in/mohamed-melek-chtourou-a6a2561b2/",
+          "https://www.linkedin.com/in/mohamedmelekchtourou/",
           "https://www.facebook.com/tiktikatikadesuka",
           "https://www.instagram.com/mohamed_chtourou93/"
         ],
@@ -154,17 +155,11 @@
       }
     </script>
 
-    <!-- =======================================================
-    Template Name: Instant
-    Template URL: https://templatemag.com/instant-bootstrap-personal-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
   </head>
 
   <body>
     <div id="navbar-placeholder"></div>
-    <canvas id="canvas" class="mmc" style="z-index: 0; position: absolute;"></canvas>
+    <canvas id="canvas" class="mmc" aria-hidden="true" style="z-index: 0; position: absolute;"></canvas>
 
 
     <div id="block">
@@ -204,6 +199,10 @@
                     >PROJETS</span
                   >
                 </a>
+                <a href="#contact-section" class="cybr-btn cybr-btn--secondary">
+                  <span data-i18n="hero_contact">Me contacter</span><span aria-hidden></span>
+                  <span aria-hidden class="cybr-btn__glitch">CONTACT</span>
+                </a>
               </div>
             </div>
           </div>
@@ -213,6 +212,8 @@
                 class="profile-image"
                 src="assets/img/mmc2.jpg"
                 alt="Portrait de Melek Chtourou"
+                width="1112"
+                height="1378"
               />
             </div>
           </div>
@@ -236,7 +237,10 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <p class="about-text" data-i18n="about_text">
-              Ingénieur spécialisé Flutter & Node.js avec une solide expérience fullstack web. J'ai conçu et publié 3 applications sur l'App Store et Google Play, dont The Landlord — une plateforme de gestion immobilière en production. Je cherche à rejoindre une équipe ambitieuse où je pourrai contribuer à des produits mobiles et web impactants.
+              Je suis ingénieur en génie logiciel, spécialisé dans le développement mobile (Flutter) et backend (Node.js). Ce qui me motive : transformer une idée en produit réel que des gens utilisent vraiment.
+            </p>
+            <p class="about-text" data-i18n="about_p2">
+              J'ai conçu et publié 3 applications sur l'App Store et Google Play, dont The Landlord — une plateforme de location immobilière en production qui compte aujourd'hui 146 000 utilisateurs actifs, déployée sur mon propre VPS via Docker. Je cherche une équipe ambitieuse (ou des missions freelance) où contribuer à des produits qui comptent.
             </p>
           </div>
         </div>
@@ -271,6 +275,52 @@
               </div>
             </div>
           </div>
+          <p class="skills-note" data-i18n="skills_note">
+            Cœur de stack en production : Flutter, Dart, Node.js, Express, MySQL & MongoDB. Le reste (Swift, Kotlin, Spring Boot, React) sur des projets académiques et personnels.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Parcours Section -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="exp_title">PARCOURS</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle" data-i18n="exp_subtitle">
+            De l'école aux produits en production
+          </p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-period" data-i18n="exp_now_period">2024 — Aujourd'hui</span>
+            <h3 class="timeline-title" data-i18n="exp_now_title">The Landlord — produit en production</h3>
+            <p class="timeline-desc" data-i18n="exp_now_desc">
+              Conception et développement d'une plateforme de gestion immobilière (Flutter + Node.js), publiée sur l'App Store et Google Play et déployée sur VPS via Docker.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-period" data-i18n="exp_2023_period">2023 — 2024</span>
+            <h3 class="timeline-title" data-i18n="exp_2023_title">Artisan d'Art & plateformes full-stack</h3>
+            <p class="timeline-desc" data-i18n="exp_2023_desc">
+              Plateforme full-stack (iOS SwiftUI + dashboard React + API Node.js, 60+ endpoints) et exploration du web 3D / temps réel.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-period" data-i18n="exp_2022_period">2022 — 2023</span>
+            <h3 class="timeline-title" data-i18n="exp_2022_title">Premières apps publiées</h3>
+            <p class="timeline-desc" data-i18n="exp_2022_desc">
+              Lost & Found (iOS, Android, Huawei), Tesa, Randev et l'app Esprit — du natif iOS/Android au cross-platform Flutter.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-period" data-i18n="exp_edu_period">2023</span>
+            <h3 class="timeline-title" data-i18n="exp_edu_title">Diplôme d'ingénieur — Esprit</h3>
+            <p class="timeline-desc" data-i18n="exp_edu_desc">
+              Génie logiciel. 2023, spécialité mobile, Très bien]
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -287,116 +337,140 @@
         </div>
 
         <div class="projects-grid">
-          <a href="pages/projects/thelandlord.html" class="project-card">
+          <div class="project-card">
             <span class="project-badge project-badge--production" data-i18n="badge_production">En production</span>
-            <img
-              src="assets/img/portfolio/thelandlord/logotll.png"
-              alt="The Landlord"
-              class="project-image"
-              loading="lazy"
-            />
-            <div class="project-card-info">
-              <h3 class="project-card-title">The Landlord</h3>
-              <p class="project-card-desc" data-i18n="card_thelandlord">Plateforme de gestion immobilière</p>
-              <div class="project-card-techs">
-                <span class="project-card-tech">Flutter</span>
-                <span class="project-card-tech">Node.js</span>
+            <a href="pages/projects/thelandlord.html" class="project-card-main">
+              <img
+                src="assets/img/portfolio/thelandlord/logotll.png"
+                alt="The Landlord"
+                class="project-image"
+                loading="lazy"
+              />
+              <div class="project-card-info">
+                <h3 class="project-card-title">The Landlord</h3>
+                <p class="project-card-desc" data-i18n="card_thelandlord">Plateforme de gestion immobilière</p>
+                <div class="project-card-techs">
+                  <span class="project-card-tech">Flutter</span>
+                  <span class="project-card-tech">Node.js</span>
+                </div>
               </div>
+            </a>
+            <div class="project-card-links">
+              <a href="https://thelandlord.tn/" target="_blank" rel="noopener noreferrer" aria-label="Site web thelandlord.tn" title="thelandlord.tn"><i class="fa fa-globe" aria-hidden="true"></i></a>
+              <a href="https://apps.apple.com/us/app/the-landlord/id6648790922" target="_blank" rel="noopener noreferrer" aria-label="App Store" title="App Store"><i class="fa fa-apple" aria-hidden="true"></i></a>
+              <a href="https://play.google.com/store/apps/details?id=com.thelandlord.bundle" target="_blank" rel="noopener noreferrer" aria-label="Google Play" title="Google Play"><i class="fa fa-android" aria-hidden="true"></i></a>
             </div>
-          </a>
+          </div>
 
-          <a href="pages/projects/lost%26found.html" class="project-card">
+          <div class="project-card">
             <span class="project-badge project-badge--production" data-i18n="badge_production">En production</span>
-            <img
-              src="assets/img/portfolio/lost&found/lost&found3.png"
-              alt="Lost and Found"
-              class="project-image"
-              loading="lazy"
-            />
-            <div class="project-card-info">
-              <h3 class="project-card-title">Lost & Found</h3>
-              <p class="project-card-desc" data-i18n="card_lostfound">App multi-plateforme objets perdus</p>
-              <div class="project-card-techs">
-                <span class="project-card-tech">Swift</span>
-                <span class="project-card-tech">Kotlin</span>
-                <span class="project-card-tech">Node.js</span>
+            <a href="pages/projects/lost-found.html" class="project-card-main">
+              <img
+                src="assets/img/portfolio/lost-found/lost-found3.png"
+                alt="Lost and Found"
+                class="project-image"
+                loading="lazy"
+              />
+              <div class="project-card-info">
+                <h3 class="project-card-title">Lost & Found</h3>
+                <p class="project-card-desc" data-i18n="card_lostfound">App multi-plateforme objets perdus</p>
+                <div class="project-card-techs">
+                  <span class="project-card-tech">Swift</span>
+                  <span class="project-card-tech">Kotlin</span>
+                  <span class="project-card-tech">Node.js</span>
+                </div>
               </div>
+            </a>
+            <div class="project-card-links">
+              <a href="https://apps.apple.com/tn/app/lost-and-found/id1610390783?l=fr" target="_blank" rel="noopener noreferrer" aria-label="App Store" title="App Store"><i class="fa fa-apple" aria-hidden="true"></i></a>
+              <a href="https://appgallery.huawei.com/app/C106259947" target="_blank" rel="noopener noreferrer" aria-label="Huawei AppGallery" title="Huawei AppGallery"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
             </div>
-          </a>
+          </div>
 
-          <a href="pages/projects/tesa.html" class="project-card">
+          <div class="project-card">
             <span class="project-badge project-badge--personal" data-i18n="badge_personal">Projet personnel</span>
-            <img
-              src="assets/img/portfolio/Tesa/TesaLogo.png"
-              alt="Tesa"
-              class="project-image"
-              loading="lazy"
-            />
-            <div class="project-card-info">
-              <h3 class="project-card-title">TESA</h3>
-              <p class="project-card-desc" data-i18n="card_tesa">Écosystème esport centralisé</p>
-              <div class="project-card-techs">
-                <span class="project-card-tech">Flutter</span>
-                <span class="project-card-tech">Node.js</span>
-                <span class="project-card-tech">MySQL</span>
+            <a href="pages/projects/tesa.html" class="project-card-main">
+              <img
+                src="assets/img/portfolio/Tesa/TesaLogo.png"
+                alt="Tesa"
+                class="project-image"
+                loading="lazy"
+              />
+              <div class="project-card-info">
+                <h3 class="project-card-title">TESA</h3>
+                <p class="project-card-desc" data-i18n="card_tesa">Gestion de tournois sportifs</p>
+                <div class="project-card-techs">
+                  <span class="project-card-tech">Flutter</span>
+                  <span class="project-card-tech">Node.js</span>
+                  <span class="project-card-tech">MySQL</span>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
 
-          <a href="pages/projects/randev.html" class="project-card">
+          <div class="project-card">
             <span class="project-badge project-badge--academic" data-i18n="badge_academic">Projet académique</span>
-            <img
-              src="assets/img/portfolio/randev/randev.png"
-              alt="Randev"
-              class="project-image"
-              loading="lazy"
-            />
-            <div class="project-card-info">
-              <h3 class="project-card-title">Randev</h3>
-              <p class="project-card-desc" data-i18n="card_randev">Gestion de rendez-vous B2B</p>
-              <div class="project-card-techs">
-                <span class="project-card-tech">Flutter</span>
-                <span class="project-card-tech">Spring Boot</span>
+            <a href="pages/projects/randev.html" class="project-card-main">
+              <img
+                src="assets/img/portfolio/randev/randev.png"
+                alt="Randev"
+                class="project-image"
+                loading="lazy"
+              />
+              <div class="project-card-info">
+                <h3 class="project-card-title">Randev</h3>
+                <p class="project-card-desc" data-i18n="card_randev">Gestion de rendez-vous B2B</p>
+                <div class="project-card-techs">
+                  <span class="project-card-tech">Flutter</span>
+                  <span class="project-card-tech">Spring Boot</span>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
 
-          <a href="pages/projects/artisanDart.html" class="project-card">
+          <div class="project-card">
             <span class="project-badge project-badge--academic" data-i18n="badge_academic">Projet académique</span>
-            <img
-              src="assets/img/portfolio/artisanDart/logoName2.webp"
-              alt="Artisan d'Art"
-              class="project-image"
-              loading="lazy"
-            />
-            <div class="project-card-info">
-              <h3 class="project-card-title">Artisan d'Art</h3>
-              <p class="project-card-desc" data-i18n="card_artisandart">Communauté d'artisans mobile + web</p>
-              <div class="project-card-techs">
-                <span class="project-card-tech">Swift</span>
-                <span class="project-card-tech">React</span>
-                <span class="project-card-tech">Node.js</span>
+            <a href="pages/projects/artisanDart.html" class="project-card-main">
+              <img
+                src="assets/img/portfolio/artisanDart/logoName2.webp"
+                alt="Artisan d'Art"
+                class="project-image"
+                loading="lazy"
+              />
+              <div class="project-card-info">
+                <h3 class="project-card-title">Artisan d'Art</h3>
+                <p class="project-card-desc" data-i18n="card_artisandart">Communauté d'artisans mobile + web</p>
+                <div class="project-card-techs">
+                  <span class="project-card-tech">Swift</span>
+                  <span class="project-card-tech">React</span>
+                  <span class="project-card-tech">Node.js</span>
+                </div>
               </div>
+            </a>
+            <div class="project-card-links">
+              <a href="https://github.com/mohamedmmc/artisan-dart" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
             </div>
-          </a>
+          </div>
 
-          <a href="pages/projects/espritApp.html" class="project-card">
+          <div class="project-card">
             <span class="project-badge project-badge--academic" data-i18n="badge_academic">Projet académique</span>
-            <img
-              src="assets/img/portfolio/esprit/esprit.png"
-              alt="Esprit App"
-              class="project-image"
-              loading="lazy"
-            />
-            <div class="project-card-info">
-              <h3 class="project-card-title">Esprit App</h3>
-              <p class="project-card-desc" data-i18n="card_esprit">App campus iOS native</p>
-              <div class="project-card-techs">
-                <span class="project-card-tech">Swift 5</span>
-                <span class="project-card-tech">UIKit</span>
+            <a href="pages/projects/espritApp.html" class="project-card-main">
+              <img
+                src="assets/img/portfolio/esprit/esprit.png"
+                alt="Esprit App"
+                class="project-image"
+                loading="lazy"
+              />
+              <div class="project-card-info">
+                <h3 class="project-card-title">Esprit App</h3>
+                <p class="project-card-desc" data-i18n="card_esprit">App campus iOS native</p>
+                <div class="project-card-techs">
+                  <span class="project-card-tech">Swift 5</span>
+                  <span class="project-card-tech">UIKit</span>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -406,9 +480,6 @@
     <!-- JavaScript Libraries -->
     <script src="assets/lib/jquery/jquery.min.js"></script>
     <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/lib/php-mail-form/validate.js"></script>
-    <!-- Lottie Player -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- Template Main Javascript File -->
     <script src="assets/js/main.js"></script>
     <!-- Navbar Template -->
@@ -421,22 +492,22 @@
 
 <div id="cv-modal">
   <div id="cv-modal-backdrop" onclick="document.getElementById('cv-modal').classList.remove('active')"></div>
-  <div id="cv-modal-box">
-    <button id="cv-modal-close" onclick="document.getElementById('cv-modal').classList.remove('active')">✕</button>
-    <h2>Choisir une version</h2>
-    <p>Deux formats disponibles selon vos besoins</p>
+  <div id="cv-modal-box" role="dialog" aria-modal="true" aria-labelledby="cv-modal-heading">
+    <button id="cv-modal-close" aria-label="Fermer" onclick="document.getElementById('cv-modal').classList.remove('active')">✕</button>
+    <h2 id="cv-modal-heading" data-i18n="cv_modal_title">Choisir une version</h2>
+    <p data-i18n="cv_modal_subtitle">Deux formats disponibles selon vos besoins</p>
     <div class="cv-options">
-      <a href="contactform/cv_design.pdf" target="_blank" class="cv-option">
+      <a href="assets/cv/cv_design.pdf" target="_blank" class="cv-option">
         <div class="cv-option-icon">🎨</div>
-        <div class="cv-option-title">Version Design</div>
-        <div class="cv-option-desc">Mise en page soignée, 2 colonnes, pour les recruteurs humains</div>
-        <span class="cv-option-badge badge-human">POUR LES HUMAINS</span>
+        <div class="cv-option-title" data-i18n="cv_design_title">Version Design</div>
+        <div class="cv-option-desc" data-i18n="cv_design_desc">Mise en page soignée, 2 colonnes, pour les recruteurs humains</div>
+        <span class="cv-option-badge badge-human" data-i18n="cv_design_badge">POUR LES HUMAINS</span>
       </a>
-      <a href="contactform/cv_ats.pdf" target="_blank" class="cv-option">
+      <a href="assets/cv/cv_ats.pdf" target="_blank" class="cv-option">
         <div class="cv-option-icon">🤖</div>
-        <div class="cv-option-title">Version ATS</div>
-        <div class="cv-option-desc">Optimisé pour les systèmes de tracking automatique</div>
-        <span class="cv-option-badge badge-robot">POUR LES ROBOTS</span>
+        <div class="cv-option-title" data-i18n="cv_ats_title">Version ATS</div>
+        <div class="cv-option-desc" data-i18n="cv_ats_desc">Optimisé pour les systèmes de suivi automatique (ATS)</div>
+        <span class="cv-option-badge badge-robot" data-i18n="cv_ats_badge">POUR LES ROBOTS</span>
       </a>
     </div>
   </div>

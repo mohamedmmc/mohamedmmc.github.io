@@ -25,6 +25,16 @@ let h = 0;
 let particles = [];
 let rgb = [];
 
+// Respect users who prefer reduced motion (a11y)
+const REDUCE_MOTION =
+  window.matchMedia &&
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// Single rAF handle so the loop can never stack (which would speed it up),
+// plus a timestamp for frame-rate-independent motion (same speed on 60/120Hz).
+let rafId = null;
+let lastTime = 0;
+
 let resizeReset = function () {
   if (!canvasBody || !drawArea) return;
   const d = document.documentElement;
@@ -105,10 +115,10 @@ Particle = function (xPos, yPos) {
     x: Math.cos(this.directionAngle) * this.speed,
     y: Math.sin(this.directionAngle) * this.speed,
   };
-  this.update = function () {
+  this.update = function (mult) {
     this.border();
-    this.x += this.vector.x;
-    this.y += this.vector.y;
+    this.x += this.vector.x * mult;
+    this.y += this.vector.y * mult;
   };
   this.border = function () {
     if (this.x >= w || this.x <= 0) {
@@ -132,6 +142,16 @@ Particle = function (xPos, yPos) {
   };
 };
 
+function drawFrame() {
+  drawArea.clearRect(0, 0, w, h);
+  for (let i = 0; i < particles.length; i++) {
+    particles[i].draw();
+  }
+  for (let i = 0; i < particles.length; i++) {
+    linkPoints(particles[i], particles);
+  }
+}
+
 function setup() {
   if (!canvasBody || !drawArea) return;
   particles = [];
@@ -139,21 +159,55 @@ function setup() {
   for (let i = 0; i < opts.particleAmount; i++) {
     particles.push(new Particle());
   }
-  window.requestAnimationFrame(loop);
+  // Reduced motion: render a single static frame instead of animating
+  if (REDUCE_MOTION) {
+    drawFrame();
+    return;
+  }
+  startLoop();
 }
 
-function loop() {
+function startLoop() {
+  // Guard against stacking multiple rAF chains (the cause of the animation
+  // speeding up after tab switches).
+  if (rafId !== null || REDUCE_MOTION || !drawArea) return;
+  lastTime = 0;
+  rafId = window.requestAnimationFrame(loop);
+}
+
+function loop(now) {
+  rafId = null;
   if (!drawArea) return;
-  window.requestAnimationFrame(loop);
+  if (typeof now !== "number") {
+    now = (window.performance && performance.now()) || 0;
+  }
+  // Frame-rate-independent step: 1.0 at 60fps, ~0.5 at 120fps.
+  let mult = lastTime ? (now - lastTime) / 16.667 : 1;
+  lastTime = now;
+  if (!isFinite(mult) || mult <= 0) mult = 1;
+  if (mult > 3) mult = 3; // clamp after long pauses so particles don't jump
   drawArea.clearRect(0, 0, w, h);
   for (let i = 0; i < particles.length; i++) {
-    particles[i].update();
+    particles[i].update(mult);
     particles[i].draw();
   }
   for (let i = 0; i < particles.length; i++) {
     linkPoints(particles[i], particles);
   }
+  rafId = window.requestAnimationFrame(loop);
 }
+
+// Pause when the tab is hidden (battery/CPU); resume cleanly with one chain.
+document.addEventListener("visibilitychange", function () {
+  if (document.hidden) {
+    if (rafId !== null) {
+      window.cancelAnimationFrame(rafId);
+      rafId = null;
+    }
+  } else {
+    startLoop();
+  }
+});
 
 // Initialize canvas animation
 if (canvasBody && drawArea) {
@@ -233,8 +287,22 @@ function Delete() {
 document.addEventListener("DOMContentLoaded", function () {
   _ELEMENT = document.querySelector("#text");
   _CURSOR = document.querySelector("#cursor");
+  // Seed the typing phrases from the stored language so EN visitors don't
+  // see a flash of French before LanguageManager runs.
+  try {
+    const lang = localStorage.getItem("language") || "fr";
+    const t = window.translations && window.translations[lang];
+    if (t && Array.isArray(t.hero_typing) && t.hero_typing.length) {
+      _CONTENT = t.hero_typing;
+    }
+  } catch (e) {}
   if (_ELEMENT && _CURSOR) {
-    startTyping();
+    if (REDUCE_MOTION) {
+      // Reduced motion: show the first phrase statically, no typing loop
+      _ELEMENT.innerHTML = _CONTENT[0];
+    } else {
+      startTyping();
+    }
   }
 });
 
@@ -250,6 +318,12 @@ window.setTypingContent = function (newContent) {
   _CONTENT = newContent;
   _PART = 0;
   _PART_INDEX = 0;
+  if (REDUCE_MOTION) {
+    // Reduced motion: show the first phrase statically, no typing loop
+    _ELEMENT.innerHTML = _CONTENT[0];
+    _CURSOR.style.display = "inline-block";
+    return;
+  }
   _ELEMENT.innerHTML = "";
   _CURSOR.style.display = "inline-block";
   startTyping();
@@ -267,20 +341,50 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Mobile navigation toggle
-const navToggle = document.getElementById("navToggle");
-const navMenu = document.querySelector(".nav-menu");
+// Mobile navigation toggle is handled in navbar.js (the navbar is injected
+// dynamically, so binding here would run before the elements exist).
 
-if (navToggle && navMenu) {
-  navToggle.addEventListener("click", function () {
-    navMenu.classList.toggle("active");
+// CV modal accessibility (index page only): Escape to close, focus
+// management and a focus trap. The modal is opened/closed by toggling the
+// "active" class, so a MutationObserver drives the focus handling.
+(function () {
+  const cvModal = document.getElementById("cv-modal");
+  if (!cvModal) return;
+  const box = document.getElementById("cv-modal-box");
+  const closeBtn = document.getElementById("cv-modal-close");
+  let lastFocused = null;
+
+  function focusable() {
+    return box ? Array.from(box.querySelectorAll("a[href], button")) : [];
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (!cvModal.classList.contains("active")) return;
+    if (e.key === "Escape") {
+      cvModal.classList.remove("active");
+      return;
+    }
+    if (e.key === "Tab") {
+      const f = focusable();
+      if (!f.length) return;
+      const first = f[0];
+      const last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
   });
 
-  // Close menu when clicking on a link
-  const navLinks = document.querySelectorAll(".nav-menu a");
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      navMenu.classList.remove("active");
-    });
-  });
-}
+  new MutationObserver(function () {
+    if (cvModal.classList.contains("active")) {
+      lastFocused = document.activeElement;
+      if (closeBtn) closeBtn.focus();
+    } else if (lastFocused && typeof lastFocused.focus === "function") {
+      lastFocused.focus();
+    }
+  }).observe(cvModal, { attributes: true, attributeFilter: ["class"] });
+})();

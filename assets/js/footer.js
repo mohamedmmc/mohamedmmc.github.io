@@ -19,7 +19,7 @@
                   Disponible immédiatement — CDI ou Freelance
                 </p>
                 <p class="contact-location" data-i18n="contact_location">
-                  Basé en Tunisie — Ouvert au remote
+                  Basé en Tunisie — Ouvert au remote & relocation (France / Europe)
                 </p>
               </div>
               <p class="contact-text" data-i18n="contact_text">
@@ -29,10 +29,10 @@
               </p>
               <div class="contact-buttons">
                 <a
-                  href="mailto:contact@melekchtourou.com"
+                  href="mailto:mohamedmelek.chtourou@gmail.com"
                   class="cybr-btn contact-btn"
                 >
-                  <i class="fa fa-envelope language-transition"></i> <span data-i18n="contact_cta">M'envoyer un email</span>
+                  <i class="fa fa-envelope language-transition" aria-hidden="true"></i> <span data-i18n="contact_cta">M'envoyer un email</span>
                   <span aria-hidden class="cybr-btn__glitch">EMAIL</span>
                 </a>
               </div>
@@ -41,33 +41,37 @@
                   href="https://github.com/mohamedmmc"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="GitHub"
                   class="social-link github language-transition"
                 >
-                  <i class="fa fa-github"></i>
+                  <i class="fa fa-github" aria-hidden="true"></i>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/mohamed-melek-chtourou-a6a2561b2/"
+                  href="https://www.linkedin.com/in/mohamedmelekchtourou/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="LinkedIn"
                   class="social-link linkedin language-transition"
                 >
-                  <i class="fa fa-linkedin"></i>
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
                 </a>
                 <a
                   href="https://www.facebook.com/tiktikatikadesuka"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Facebook"
                   class="social-link facebook language-transition"
                 >
-                  <i class="fa fa-facebook"></i>
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
                 <a
                   href="https://www.instagram.com/mohamed_chtourou93/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Instagram"
                   class="social-link instagram language-transition"
                 >
-                  <i class="fa fa-instagram"></i>
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
