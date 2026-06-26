@@ -19,7 +19,7 @@
     '/pages/projects/artisanDart.html',
     '/pages/projects/randev.html',
     '/pages/projects/espritApp.html',
-    '/pages/projects/lost&found.html'
+    '/pages/projects/lost-found.html'
   ];
 
   const isMultilingualPage = multilingualPages.some(page =>
@@ -29,11 +29,11 @@
 
   const languageSelectorHTML = isMultilingualPage ? `
     <li class="language-selector">
-      <button class="lang-btn active" data-language="fr" title="Français">
-        🇫🇷
+      <button class="lang-btn active" data-language="fr" title="Français" aria-label="Français" aria-pressed="true">
+        <span aria-hidden="true">🇫🇷</span>
       </button>
-      <button class="lang-btn" data-language="en" title="English">
-        🇬🇧
+      <button class="lang-btn" data-language="en" title="English" aria-label="English" aria-pressed="false">
+        <span aria-hidden="true">🇬🇧</span>
       </button>
     </li>
   ` : '';
@@ -44,13 +44,13 @@
       <div class="container">
         <div class="nav-content">
           <a href="${logoHref}" class="nav-logo">MMC</a>
-          <ul class="nav-menu">
+          <ul class="nav-menu" id="navMenu">
             <li><a href="${aboutHref}" data-i18n="nav_about">À Propos</a></li>
             <li><a href="${worksHref}" data-i18n="nav_projects">Projets</a></li>
             <li><a href="${contactHref}" data-i18n="nav_contact">Contact</a></li>
             ${languageSelectorHTML}
           </ul>
-          <button class="nav-toggle" id="navToggle">
+          <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-controls="navMenu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -72,8 +72,9 @@
 
       if (navToggle && navMenu) {
         navToggle.addEventListener('click', () => {
-          navMenu.classList.toggle('active');
+          const open = navMenu.classList.toggle('active');
           navToggle.classList.toggle('active');
+          navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
 
         // Close menu when clicking on a link
@@ -82,6 +83,7 @@
           link.addEventListener('click', () => {
             navMenu.classList.remove('active');
             navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
           });
         });
       }

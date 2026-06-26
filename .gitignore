@@ -1,0 +1,10 @@
+# OS noise
+.DS_Store
+**/.DS_Store
+
+# Local dev / tooling artifacts (not part of the deployed site)
+.claude/
+portfolio-audit/
+
+# Editor
+.vscode/

@@ -50,7 +50,7 @@
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Poppins:400,500,600,700&display=swap"
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap"
       rel="stylesheet"
     />
 
@@ -98,7 +98,7 @@
             <img
               src="../../assets/img/portfolio/thelandlord/logotll.png"
               alt="Logo The Landlord"
-              loading="lazy"
+             
             />
           </div>
           <h1 data-i18n="thelandlord_title">The Landlord</h1>
@@ -124,20 +124,20 @@
 
           <div class="hero-stats">
             <div class="hero-stat">
-              <span class="hero-stat-number">2</span>
-              <span class="hero-stat-label">Stores</span>
+              <span class="hero-stat-number">146K</span>
+              <span class="hero-stat-label" data-i18n="stat_active_users">Utilisateurs actifs</span>
             </div>
             <div class="hero-stat">
-              <span class="hero-stat-number">Multi-plateforme</span>
-              <span class="hero-stat-label">Déploiement</span>
+              <span class="hero-stat-number">2 600+</span>
+              <span class="hero-stat-label" data-i18n="stat_members">Membres</span>
             </div>
             <div class="hero-stat">
-              <span class="hero-stat-number">VPS OVH</span>
-              <span class="hero-stat-label">Infrastructure</span>
+              <span class="hero-stat-number">19</span>
+              <span class="hero-stat-label" data-i18n="stat_modules">Modules métier</span>
             </div>
             <div class="hero-stat">
-              <span class="hero-stat-number">2024</span>
-              <span class="hero-stat-label">Année</span>
+              <span class="hero-stat-number">40+</span>
+              <span class="hero-stat-label" data-i18n="stat_data_models">Modèles de données</span>
             </div>
           </div>
 
@@ -146,6 +146,9 @@
             <span class="tech-badge">Node.js</span>
             <span class="tech-badge">Express</span>
             <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">Redis</span>
+            <span class="tech-badge">Socket.io</span>
+            <span class="tech-badge">Firebase</span>
             <span class="tech-badge">Docker</span>
           </div>
         </div>
@@ -159,22 +162,33 @@
               <div class="feature-card">
                 <h3 data-i18n="project_summary">Résumé</h3>
                 <p data-i18n="thelandlord_description">
-                  The Landlord est une plateforme web destinée à simplifier la
-                  location et la gestion de biens immobiliers. Elle permet aux
-                  propriétaires de gérer leurs annonces et aux locataires de
-                  trouver un logement via des filtres avancés.
+                  The Landlord est une plateforme de location immobilière (iOS,
+                  Android, Web) en production sur le marché tunisien : 146 000
+                  utilisateurs actifs et 2 600+ membres inscrits. Le backend
+                  Node.js dockerisé repose sur 2 serveurs, 40+ modèles de données
+                  et 19 modules métier.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <h4 data-i18n="thelandlord_role_title">Mon rôle & périmètre</h4>
+                <p data-i18n="thelandlord_role_desc">
+                  Développeur & Product Manager : pilotage produit (backlog,
+                  sprints, équipe de 2 développeurs), développement de l'app
+                  Flutter et de l'API Node.js, puis déploiement de
+                  l'infrastructure (Docker sur VPS OVH).
                 </p>
               </div>
 
               <div class="feature-card">
                 <h4 data-i18n="project_features">Fonctionnalités clés</h4>
                 <ul data-i18n-list="thelandlord_features">
-                  <li>Recherche multi-critères (prix, localisation, type)</li>
-                  <li>Gestion d'annonces (création, modification, calendrier)</li>
-                  <li>Messagerie entre locataires et propriétaires</li>
-                  <li>Pages de biens avec galeries et infos détaillées</li>
-                  <li>Feed social et avis utilisateurs</li>
-                  <li>Déploiement Docker sur VPS OVH</li>
+                  <li>Réservations & calendrier</li>
+                  <li>Paiements en ligne</li>
+                  <li>Messagerie temps réel (Socket.io + Redis)</li>
+                  <li>Système de parrainage & cohost</li>
+                  <li>Notifications push (Firebase FCM)</li>
+                  <li>Intégrations Channel Manager & WhatsApp API</li>
                 </ul>
               </div>
             </div>
@@ -187,6 +201,9 @@
                   <span class="tech-badge">Node.js</span>
                   <span class="tech-badge">Express</span>
                   <span class="tech-badge">MySQL</span>
+                  <span class="tech-badge">Redis</span>
+                  <span class="tech-badge">Socket.io</span>
+                  <span class="tech-badge">Firebase</span>
                   <span class="tech-badge">Docker</span>
                   <span class="tech-badge">VPS OVH</span>
                 </div>
@@ -213,8 +230,8 @@
       <!-- Architecture Section -->
       <section class="architecture-section">
         <div class="container">
-          <h2 class="showcase-title">Architecture</h2>
-          <p class="showcase-subtitle">
+          <h2 class="showcase-title" data-i18n="sec_architecture">Architecture</h2>
+          <p class="showcase-subtitle" data-i18n="thelandlord_arch_subtitle">
             Architecture full-stack déployée sur VPS OVH via Docker — application Flutter multi-plateforme et API Node.js avec MySQL.
           </p>
           <div class="arch-diagram">
@@ -233,20 +250,26 @@
             <div class="arch-node">
               <div class="arch-node-icon">🗄️</div>
               <div class="arch-node-title">MySQL</div>
-              <div class="arch-node-sub">Base de données</div>
+              <div class="arch-node-sub" data-i18n="arch_database">Base de données</div>
             </div>
           </div>
           <div class="arch-diagram" style="margin-top: 20px;">
             <div class="arch-node">
-              <div class="arch-node-icon">🐳</div>
-              <div class="arch-node-title">Docker</div>
-              <div class="arch-node-sub">Containerisation</div>
+              <div class="arch-node-icon">💬</div>
+              <div class="arch-node-title">Socket.io + Redis</div>
+              <div class="arch-node-sub" data-i18n="arch_realtime">Temps réel</div>
             </div>
-            <div class="arch-arrow">⟷</div>
+            <div class="arch-arrow">·</div>
             <div class="arch-node">
-              <div class="arch-node-icon">🖥️</div>
-              <div class="arch-node-title">VPS OVH</div>
-              <div class="arch-node-sub">Déploiement</div>
+              <div class="arch-node-icon">🔔</div>
+              <div class="arch-node-title">Firebase FCM</div>
+              <div class="arch-node-sub" data-i18n="arch_push">Notifications push</div>
+            </div>
+            <div class="arch-arrow">·</div>
+            <div class="arch-node">
+              <div class="arch-node-icon">🐳</div>
+              <div class="arch-node-title">Docker · VPS OVH</div>
+              <div class="arch-node-sub" data-i18n="stat_deployment">Déploiement</div>
             </div>
           </div>
         </div>
@@ -255,52 +278,52 @@
       <!-- Macbook Showcase -->
       <section class="showcase-section">
         <div class="container">
-          <h2 class="showcase-title">Plateforme Web</h2>
-          <p class="showcase-subtitle">
+          <h2 class="showcase-title" data-i18n="sec_web_platform">Plateforme Web</h2>
+          <p class="showcase-subtitle" data-i18n="thelandlord_web_subtitle">
             Interface web moderne pour la gestion et la recherche de biens immobiliers.
           </p>
           <div class="macbook-showcase">
             <div>
-              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/thelandlord/property-detail.png" data-device="macbook">
-                <img class="device-screen" src="../../assets/img/portfolio/thelandlord/property-detail.png" alt="The Landlord - Détail propriété" loading="lazy" />
-                <img class="device-overlay" src="../../assets/img/macbook-mockup.png" alt="" />
+              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/thelandlord/property-detail.webp" data-device="macbook">
+                <img class="device-screen" src="../../assets/img/portfolio/thelandlord/property-detail.webp" alt="The Landlord - Détail propriété" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/macbook-mockup.webp" alt="" />
               </div>
-              <div class="device-label">Détail Propriété</div>
+              <div class="device-label" data-i18n="thelandlord_dl_property_detail">Détail Propriété</div>
             </div>
             <div>
-              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/thelandlord/property-overview.png" data-device="macbook">
-                <img class="device-screen" src="../../assets/img/portfolio/thelandlord/property-overview.png" alt="The Landlord - Vue d'ensemble" loading="lazy" />
-                <img class="device-overlay" src="../../assets/img/macbook-mockup.png" alt="" />
+              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/thelandlord/property-overview.webp" data-device="macbook">
+                <img class="device-screen" src="../../assets/img/portfolio/thelandlord/property-overview.webp" alt="The Landlord - Vue d'ensemble" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/macbook-mockup.webp" alt="" />
               </div>
-              <div class="device-label">Vue d'ensemble</div>
+              <div class="device-label" data-i18n="thelandlord_dl_overview">Vue d'ensemble</div>
             </div>
             <div>
-              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/thelandlord/reviews.png" data-device="macbook">
-                <img class="device-screen" src="../../assets/img/portfolio/thelandlord/reviews.png" alt="The Landlord - Avis" loading="lazy" />
-                <img class="device-overlay" src="../../assets/img/macbook-mockup.png" alt="" />
+              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/thelandlord/reviews.webp" data-device="macbook">
+                <img class="device-screen" src="../../assets/img/portfolio/thelandlord/reviews.webp" alt="The Landlord - Avis" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/macbook-mockup.webp" alt="" />
               </div>
-              <div class="device-label">Avis</div>
+              <div class="device-label" data-i18n="thelandlord_dl_reviews">Avis</div>
             </div>
             <div>
-              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/thelandlord/messaging.png" data-device="macbook">
-                <img class="device-screen" src="../../assets/img/portfolio/thelandlord/messaging.png" alt="The Landlord - Messagerie" loading="lazy" />
-                <img class="device-overlay" src="../../assets/img/macbook-mockup.png" alt="" />
+              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/thelandlord/messaging.webp" data-device="macbook">
+                <img class="device-screen" src="../../assets/img/portfolio/thelandlord/messaging.webp" alt="The Landlord - Messagerie" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/macbook-mockup.webp" alt="" />
               </div>
-              <div class="device-label">Messagerie</div>
+              <div class="device-label" data-i18n="thelandlord_dl_messaging">Messagerie</div>
             </div>
             <div>
-              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/thelandlord/contact.png" data-device="macbook">
-                <img class="device-screen" src="../../assets/img/portfolio/thelandlord/contact.png" alt="The Landlord - Contact" loading="lazy" />
-                <img class="device-overlay" src="../../assets/img/macbook-mockup.png" alt="" />
+              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/thelandlord/contact.webp" data-device="macbook">
+                <img class="device-screen" src="../../assets/img/portfolio/thelandlord/contact.webp" alt="The Landlord - Contact" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/macbook-mockup.webp" alt="" />
               </div>
-              <div class="device-label">Contact</div>
+              <div class="device-label" data-i18n="dl_contact">Contact</div>
             </div>
             <div>
-              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/thelandlord/social-feed.jpg" data-device="macbook">
-                <img class="device-screen" src="../../assets/img/portfolio/thelandlord/social-feed.jpg" alt="The Landlord - Feed Social" loading="lazy" />
-                <img class="device-overlay" src="../../assets/img/macbook-mockup.png" alt="" />
+              <div class="device-mockup macbook-mockup gallery-item" data-image="../../assets/img/portfolio/thelandlord/social-feed.webp" data-device="macbook">
+                <img class="device-screen" src="../../assets/img/portfolio/thelandlord/social-feed.webp" alt="The Landlord - Feed Social" loading="lazy" />
+                <img class="device-overlay" src="../../assets/img/macbook-mockup.webp" alt="" />
               </div>
-              <div class="device-label">Feed Social</div>
+              <div class="device-label" data-i18n="thelandlord_dl_social_feed">Feed Social</div>
             </div>
           </div>
         </div>
@@ -348,11 +371,8 @@
     <div id="footer-placeholder"></div>
 
     <!-- JS Libraries -->
-    <script type="module" src="../../assets/js/firebase-config.js"></script>
     <script src="../../assets/lib/jquery/jquery.min.js"></script>
     <script src="../../assets/lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../../assets/lib/php-mail-form/validate.js"></script>
-    <script src="../../assets/lib/easing/easing.min.js"></script>
     <script src="../../assets/js/main.js"></script>
     <!-- Navbar Template -->
     <script src="../../assets/js/navbar.js"></script>
@@ -361,52 +381,7 @@
     <!-- Translations -->
     <script src="../../assets/js/translations.js"></script>
 
-    <!-- Gallery Modal Script -->
-    <script>
-      (function() {
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        const modal = document.getElementById('galleryModal');
-        const modalDevice = document.getElementById('galleryModalDevice');
-        const modalScreen = document.getElementById('galleryModalScreen');
-        const modalFrame = document.getElementById('galleryModalFrame');
-        const closeBtn = document.querySelector('.gallery-modal-close');
-        const prevBtn = document.querySelector('.gallery-modal-prev');
-        const nextBtn = document.querySelector('.gallery-modal-next');
-        const FRAMES = {
-          iphone: '../../assets/img/iphone-mockup.png',
-          macbook: '../../assets/img/macbook-mockup.png'
-        };
-        let currentIndex = 0;
-        const images = Array.from(galleryItems).map(item => ({
-          src: item.getAttribute('data-image'),
-          alt: item.querySelector('.device-screen').alt,
-          device: item.getAttribute('data-device')
-        }));
-        function showImage(index) {
-          currentIndex = index;
-          var img = images[index];
-          modalScreen.src = img.src;
-          modalScreen.alt = img.alt;
-          modalFrame.src = FRAMES[img.device];
-          modalDevice.className = 'gallery-modal-device device-' + img.device;
-          modal.classList.add('active');
-          document.body.style.overflow = 'hidden';
-        }
-        function closeModal() { modal.classList.remove('active'); document.body.style.overflow = ''; }
-        function showNext() { showImage((currentIndex + 1) % images.length); }
-        function showPrev() { showImage((currentIndex - 1 + images.length) % images.length); }
-        galleryItems.forEach((item, index) => { item.addEventListener('click', () => showImage(index)); });
-        closeBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-        nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
-        prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
-        document.addEventListener('keydown', (e) => {
-          if (!modal.classList.contains('active')) return;
-          if (e.key === 'Escape') closeModal();
-          if (e.key === 'ArrowRight') showNext();
-          if (e.key === 'ArrowLeft') showPrev();
-        });
-      })();
-    </script>
+    <!-- Gallery Lightbox (shared, accessible) -->
+    <script src="../../assets/js/gallery.js"></script>
   </body>
 </html>
